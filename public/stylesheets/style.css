@@ -1,13 +1,27 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+ margin: 0 auto;
+ padding: 0 auto;
+}
+#landing {
+ background: #03232E;
+ background-size: cover;
+ height: 100vh;
 }
 
-a {
-  color: #00B7FF;
-}
 #logo {
- font-size: 100px;
+ margin-top: 20px;
+ font-size: 15em;
  text-align: center;
- 
+ font-family: 'Amatic SC', cursive;
+}
+.sun {
+ width: 200px;
+ margin-top: 20px;
+}
+#land-foot {
+ background-color: white;
+ height: 100px;
+}
+.container-fluid {
+ padding: 0;
 }
