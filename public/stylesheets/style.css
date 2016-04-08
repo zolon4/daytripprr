@@ -1,27 +1,37 @@
+/* universal */
+
 body {
  margin: 0 auto;
  padding: 0 auto;
 }
+.container-fluid {
+ padding: 0;
+}
+
+/* landing */
+
 #landing {
  background: #03232E;
  background-size: cover;
  height: 100vh;
 }
 
+
 #logo {
- margin-top: 20px;
  font-size: 15em;
  text-align: center;
  font-family: 'Amatic SC', cursive;
+ color: white;
+}
+h4 {
+ font-size: 2.3em;
+ font-family: 'Montserrat', serif;
 }
 .sun {
- width: 200px;
+ width: 16%;
  margin-top: 20px;
 }
 #land-foot {
  background-color: white;
  height: 100px;
-}
-.container-fluid {
- padding: 0;
 }
