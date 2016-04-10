@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 
 /*GET saved trips page. */
-router.get('/saved_trips', function(req, res, next){
+router.get('/saved', function(req, res, next){
   res.render('saved_trips');
 });
 
