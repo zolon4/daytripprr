@@ -12,8 +12,8 @@ router.get('/profile', function(req,res,next){
  var user = User.find({},'name email currentcity',function(err,user){
        if (err)
        console.log('error occured in the database');
+       console.log(user)
        res.render('profile', {user: user})
-
    });
 })
 
