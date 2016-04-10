@@ -7,15 +7,15 @@ var user = new User();
 /* GET home page. */
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express', user: user });
+  res.render('index', { title: 'Express'});
 });
 
 router.get('/profile', function(req,res,next){
  var user = User.find({},'name email currentcity',function(err,user){
        if (err)
        console.log('error occured in the database');
+       console.log(user)
        res.render('profile', {user: user})
-
    });
 })
 
