@@ -22,4 +22,9 @@ router.get('/:id', function(req, res, next){
   res.render('trip_show');
 });
 
+/*GET login page. */
+router.get('/login', function(req, res, next){
+  res.render('login');
+});
+
 module.exports = router;
