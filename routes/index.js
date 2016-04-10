@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-
+var User = require('../models/user');
+var Trip = require('../models/trip')
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
