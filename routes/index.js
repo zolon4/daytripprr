@@ -1,7 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../models/user');
-var Trip = require('../models/trip')
+var Trip = require('../models/trip');
+var user = new User();
+
 /* GET home page. */
 
 router.get('/', function(req, res, next) {
