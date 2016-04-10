@@ -5,7 +5,7 @@ var Trip = require('../models/trip')
 /* GET home page. */
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express', user: user });
+  res.render('index', { title: 'Express'});
 });
 
 router.get('/profile', function(req,res,next){
