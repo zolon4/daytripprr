@@ -48,7 +48,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // set passport config
 require('./config/passport')(passport);
-
+app.use(function(req, res, next) {
+  global.currentUser = req.user;
+  next();
+});
 //custom middleware to allow global access to currentUser variable
 // app.use(function(req, res, next){
 //   global.currentUser = req.user;

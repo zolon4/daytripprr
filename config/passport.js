@@ -8,7 +8,6 @@ var User = require('../models/user');
 
 // expose this function to our app using module.exports
 module.exports = function(passport) {
-
     // =========================================================================
     // passport session setup ==================================================
     // =========================================================================
@@ -83,5 +82,40 @@ module.exports = function(passport) {
         });
 
     }));
+
+
+   passport.use('local-login', new LocalStrategy({
+    usernameField: 'email',
+    passwordField: 'password',
+    passReqToCallback: true
+  }, function(req, email, password, done) {
+
+    // Search for a use with this email
+    User.findOne({ 'local.email': email }, function(err, user) {
+      if (err) return done(err);
+
+      // If no user is found
+      if (!user) return done(null, false, req.flash('errorMessage', 'No user found.'));
+
+      // Check if the password is correct
+      if (!user.validPassword(password)) return done(null, false, req.flash('errorMessage', 'Oops wrong password!'));
+
+      return done(null, user);
+    });
+
+  }));
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 };
