@@ -1,9 +1,19 @@
 /* universal */
-
+body {
+ background-color: #ffd2bf;
+}
 .container-fluid {
  padding: 0;
 }
-
+.prof-info {
+ font-family: 'Lato', serif;
+ font-size: 1.5em;
+ text-align: right;
+}
+.round {
+ border-radius: 50%;
+ width: 100%;
+}
 /* landing */
 
 #landing {
@@ -59,7 +69,7 @@ a:hover {
 }
 
 .sidebar {
- background-color: black;
+ background-color: #1A0323;
  color: white;
  height: 100vh;
  font-family: 'Montserrat', serif;
@@ -76,4 +86,21 @@ a:hover {
 .sidebar-nav {
  margin-top: 20px;
 
+}
+
+.user-profile {
+ background-color: #2a8b8b;
+ color: white;
+ height: 100vh;
+ font-family: 'Lato', serif;
+ font-size: 20px;
+ margin: 0 auto;
+ text-align: center;
+}
+
+.user-profile-img {
+ margin-top: 50px;
+}
+#info {
+ margin-top: 60px;
 }
