@@ -53,17 +53,17 @@ router.get('/settings', function(req, res, next){
 router.put('/settings', function(req, res, next){
   var user = User.findOne({},'username email currentcity');
 
-  db.user.update(
-     { _id: user.local._id },
-     { $set:
-        {
-          username: req.body.username,
-          email: req.body.email,
-          currentcity: req.body.currentcity,
-          currentstate: req.body.currentstate
-        }
-     }
-  )
+
+  db.users.findOneAndUpdate(
+     { id: req.user._id },
+     { $set },
+     {username: req.body.username,
+      email: req.body.email,
+      currentcity: req.body.currentcity,
+      currentstate: req.body.currentstate
+      }
+  );
+
   res.redirect('/profile');
 })
 
