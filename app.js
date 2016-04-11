@@ -12,7 +12,8 @@ var users = require('./routes/users');
 
 var app = express();
 
-
+var srcPath = __dirname + '/sass';
+var destPath = __dirname + '/public/styles';
 // OR
 
 
@@ -39,6 +40,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 var mongoose = require('mongoose');
 mongoose.connect(process.env.DB_CONN_DAYTRIPPRR);
+
+app.use('/styles', sassMiddleware({
+  src: srcPath,
+  dest: destPath,
+  debug: true,
+  outputStyle: 'expanded'
+}));
 
 app.use('/', routes);
 app.use('/users', users);
