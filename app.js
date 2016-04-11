@@ -4,6 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var passport = require('passport');
+var methodOverride = require('method-override');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -22,6 +24,22 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+
+// passport.initialize() middleware is required to initialize Passport.
+app.use(passport.initialize());
+// For clients that don't support 'PUT', 'DELETE'
+app.use(methodOverride(function(request, response) {
+  if(request.body && typeof request.body === 'object' && '_method' in request.body) {
+    var method = request.body._method;
+    delete request.body._method;
+    return method;
+  }
+}));
+
+// Set Passport configuration
+require('./config/passport')(passport);
+
 var mongoose = require('mongoose');
 mongoose.connect(process.env.DB_CONN_DAYTRIPPRR);
 
@@ -34,6 +52,8 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
+
+
 
 // error handlers
 
