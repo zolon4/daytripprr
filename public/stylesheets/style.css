@@ -29,6 +29,7 @@ body {
  border-left: none;
  border-right: none;
 }
+
 #login {
  margin-top: 30px;
  width: 80%;
@@ -67,7 +68,9 @@ a:hover {
  font-family: 'Amatic SC', cursive;
  font-size: 40px;
 }
-
+.login-btn {
+ text-align: right;
+}
 .sidebar {
  background-color: #1A0323;
  color: white;
@@ -87,7 +90,10 @@ a:hover {
  margin-top: 20px;
 
 }
-
+#login {
+ width: 100%;
+ margin: 100px auto;
+}
 .user-profile {
  background-color: #2a8b8b;
  color: white;
@@ -103,4 +109,14 @@ a:hover {
 }
 #info {
  margin-top: 60px;
+}
+@media screen and (max-width: 1000px) {
+ #name {
+  font-size: 1.8em;
+ }
+}
+@media screen and (max-width: 950px) {
+ #name {
+  font-size: 1.5em;
+ }
 }
