@@ -2,7 +2,7 @@
 <% include ./partials/header %>
 <h1> Update yer damn settings</h1>
 
-<form action="/users/settings" method="post">
+<form action="/users/settings" method="put">
      <div class="form-group">
         <label>Username</label>
         <input type="text" class="form-control" name="username" value="<%= user.local.username %>">
