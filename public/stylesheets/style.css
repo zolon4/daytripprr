@@ -29,6 +29,7 @@ body {
  border-left: none;
  border-right: none;
 }
+
 #login {
  margin-top: 30px;
  width: 80%;
@@ -89,7 +90,10 @@ a:hover {
  margin-top: 20px;
 
 }
-
+#login {
+ width: 100%;
+ margin: 100px auto;
+}
 .user-profile {
  background-color: #2a8b8b;
  color: white;
