@@ -4,8 +4,12 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var sass = require('node-sass')
-var sassMiddleware = require('node-sass-middleware')
+var sass = require('node-sass');
+var sassMiddleware = require('node-sass-middleware');
+var passport = require('passport');
+var flash = require('connect-flash');
+var session = require('express-session');
+
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -16,10 +20,15 @@ var srcPath = __dirname + '/sass';
 var destPath = __dirname + '/public/styles';
 // OR
 
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+app.use(session({ secret: 'bumpsonalog' })); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+app.use(flash()); // use connect-flash for flash messages stored in session
+
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -36,6 +45,15 @@ app.use(
    })
 );
 app.use(express.static(path.join(__dirname, 'public')));
+
+// set passport config
+require('./config/passport')(passport);
+
+//custom middleware to allow global access to currentUser variable
+// app.use(function(req, res, next){
+//   global.currentUser = req.user;
+//   next();
+// })
 
 var mongoose = require('mongoose');
 mongoose.connect(process.env.DB_CONN_DAYTRIPPRR);
