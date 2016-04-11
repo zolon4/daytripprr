@@ -67,7 +67,9 @@ a:hover {
  font-family: 'Amatic SC', cursive;
  font-size: 40px;
 }
-
+.login-btn {
+ text-align: right;
+}
 .sidebar {
  background-color: #1A0323;
  color: white;
@@ -103,4 +105,14 @@ a:hover {
 }
 #info {
  margin-top: 60px;
+}
+@media screen and (max-width: 1000px) {
+ #name {
+  font-size: 1.8em;
+ }
+}
+@media screen and (max-width: 950px) {
+ #name {
+  font-size: 1.5em;
+ }
 }
