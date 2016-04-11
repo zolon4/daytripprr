@@ -1,26 +1,24 @@
 <% include ./partials/header %>
+
 <div id="login">
-<div class="col-sm-6 col-sm-offset-3">
-<h1><span class="fa fa-user"></span> Login </h1>
-<!-- LOGIN FORM -->
-<form action="/users/login" method="post">
+ <div class="card">
+  <div class="card-block">
+   <h1 class="login-heading">login</h1>
+   <form action="/users/login" method="post">
     <div class="form-group">
-        <label>Email</label>
-        <input type="text" class="form-control" name="email">
+     <label>email</label>
+     <input type="text" class="form-control" name="email">
     </div>
-
     <div class="form-group">
-        <label>Password</label>
-        <input type="password" class="form-control" name="password">
+     <label>password</label>
+     <input type="password" class="form-control" name="password">
     </div>
-
-
-    <input type="submit" value="Login" class="btn btn-warning btn-lg"></input>
-</form>
-
-<hr>
-  <p>Don't already have and account? <a href="/users/signup">Sign Up!</a></p>
-</div>
-</div>
+    <input type="submit" value="let's go" class="btn btn-primary btn-block btn-lg"></input>
+   </form>
+   <hr>
+    <p>Don't already have an account?<a href="/users/signup"> Sign Up!</a></p>
+   </div>
+  </div>
+ </div>
 
 <% include ./partials/footer %>

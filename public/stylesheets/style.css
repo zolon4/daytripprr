@@ -1,6 +1,9 @@
 /* universal */
 body {
- background-color: #ffd2bf;
+ background-color: #4aedd7;
+}
+.content {
+ margin-left: 190px;
 }
 .container-fluid {
  padding: 0;
@@ -28,12 +31,16 @@ body {
  border-top: none;
  border-left: none;
  border-right: none;
+ border-radius: 0%;
 }
-
-#login {
+.login-heading {
+ font-size: 60px;
+}
+#login, #signup {
  margin-top: 30px;
  width: 80%;
  margin: 40px auto;
+ font-family: 'Montserrat', serif;
 }
 
 #logo {
@@ -72,6 +79,8 @@ a:hover {
  text-align: right;
 }
 .sidebar {
+ position: fixed;
+ width: 190px;
  background-color: #1A0323;
  color: white;
  height: 100vh;
@@ -91,9 +100,10 @@ a:hover {
 
 }
 #login {
- width: 100%;
+ width: 85%;
  margin: 100px auto;
 }
+
 .user-profile {
  background-color: #2a8b8b;
  color: white;
