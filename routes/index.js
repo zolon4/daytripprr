@@ -20,8 +20,8 @@ router.get('/profile', function(req,res,next){
 })
 
 /*GET saved trips page. */
-router.get('/saved', function(req, res, next){
-  res.render('saved');
+router.get('/profile/user_settings', function(req, res, next){
+  res.render('usersettings');
 });
 
 /*GET trip search page. */
