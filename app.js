@@ -52,11 +52,6 @@ app.use(function(req, res, next) {
   global.currentUser = req.user;
   next();
 });
-//custom middleware to allow global access to currentUser variable
-// app.use(function(req, res, next){
-//   global.currentUser = req.user;
-//   next();
-// })
 
 var mongoose = require('mongoose');
 mongoose.connect(process.env.DB_CONN_DAYTRIPPRR);

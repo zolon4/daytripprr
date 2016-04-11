@@ -19,11 +19,6 @@ router.get('/profile', function(req,res,next){
    });
 })
 
-/*GET saved trips page. */
-router.get('/profile/user_settings', function(req, res, next){
-  res.render('usersettings');
-});
-
 /*GET trip search page. */
 router.get('/search', function(req, res, next){
   res.render('search');
