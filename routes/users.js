@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var passport = require('passport');
+var User = require('../models/user');
+var Trip = require('../models/trip');
 
 
 /* GET users listing. */
@@ -39,6 +41,23 @@ router.get('/logout', function(req, res) {
     req.logout();
     res.redirect('/');
   });
+
+/*GET user settings page. */
+router.get('/settings', function(req, res, next){
+  var user = User.findOne({}, 'name email currentcity currentstate', function(err, user){
+    console.log(user);
+   res.render('settings', {user: req.user});
+  })
+
+});
+
+router.post('/settings', function(req, res, next){
+  var user = User.findOne({}, 'name email currentcity currentstate', function(err, user){
+    console.log(user.local.username);
+  })
+  user.save
+  res.redirect('/profile');
+})
 
 // route middleware to make sure a user is logged in
 function isLoggedIn(req, res, next) {
