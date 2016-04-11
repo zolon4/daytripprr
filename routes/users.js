@@ -44,28 +44,22 @@ router.get('/logout', function(req, res) {
 
 /*GET user settings page. */
 router.get('/settings', function(req, res, next){
-  var user = User.findOne({}, 'name email currentcity currentstate', function(err, user){
+  console.log(req.user);
+  var user = User.findOne({}, 'username email currentcity currentstate', function(err, user){
+    console.log('form')
     console.log(user);
    res.render('settings', {user: req.user});
   })
 });
 
 router.put('/settings', function(req, res, next){
-  var user = User.findOne({},'username email currentcity');
-
-
-  db.users.findOneAndUpdate(
-     { id: req.user._id },
-     { $set },
-     {username: req.body.username,
-      email: req.body.email,
-      currentcity: req.body.currentcity,
-      currentstate: req.body.currentstate
-      }
-  );
-
-  res.redirect('/profile');
-})
+  User.findOneAndUpdate({ _id: req.user._id }, { 'local.username': req.body.username, 'local.email': req.body.email, 'local.currentcity': req.body.currentcity, 'local.currentstate': req.body.currentstate }, function(err, user) {
+    if (err) console.log(err);
+    console.log("update")
+    console.log(user);
+    res.redirect('/profile');
+  });
+});
 
 // route middleware to make sure a user is logged in
 function isLoggedIn(req, res, next) {
