@@ -27,15 +27,14 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-
-  app.use(
-     sassMiddleware({
-         src: __dirname + '/sass',
-         dest: __dirname + '/public/stylesheets',
-         prefix:  '/stylesheets',
-         debug: true,
-     })
-  );
+app.use(
+   sassMiddleware({
+       src: __dirname + '/sass',
+       dest: __dirname + '/public/stylesheets',
+       prefix:  '/stylesheets',
+       debug: true,
+   })
+);
 app.use(express.static(path.join(__dirname, 'public')));
 
 var mongoose = require('mongoose');
