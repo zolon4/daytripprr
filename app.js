@@ -10,7 +10,6 @@ var passport = require('passport');
 var flash = require('connect-flash');
 var session = require('express-session');
 
-
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
@@ -48,6 +47,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // set passport config
 require('./config/passport')(passport);
+
 app.use(function(req, res, next) {
   global.currentUser = req.user;
   next();
