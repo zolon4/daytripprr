@@ -1,9 +1,5 @@
 /* universal */
 
-body {
- margin: 0 auto;
- padding: 0 auto;
-}
 .container-fluid {
  padding: 0;
 }
@@ -34,4 +30,38 @@ h4 {
 #land-foot {
  background-color: white;
  height: 100px;
+}
+
+/* sidebar */
+a:hover {
+ color: #d3d3d3;
+ text-decoration: none;
+}
+.mountain {
+ width: 100%;
+}
+#side-logo {
+ text-align: center;
+ font-family: 'Amatic SC', cursive;
+ font-size: 40px;
+}
+
+.sidebar {
+ background-color: black;
+ color: white;
+ height: 100vh;
+ font-family: 'Montserrat', serif;
+ font-size: 20px;
+ margin: 0 auto;
+}
+
+.nav-sidebar {
+ list-style-type: none;
+ text-align: center;
+ margin-top: 60px;
+
+}
+.sidebar-nav {
+ margin-top: 20px;
+
 }
