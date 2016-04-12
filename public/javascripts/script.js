@@ -8,7 +8,7 @@ var map = '<img id="theImg" src="http://images.clipartpanda.com/sun-transparent-
       url: "/distance",
       data: {destination: $('#destination').val()}
     }).done(function(response){
-     $('#result').append('<div class="card"><div class="card-block"><div class="row"><div class="col-sm-3"><img src="http://image005.flaticon.com/28/svg/33/33409.svg" class="img-fluid"/></div><div class="col-sm-9"><h4>'+ response.destination +'</h4><p>' + response.duration +'</p></div></div></div></div>')
+     $('#result').append('<div class="card"><div class="card-block"><div class="row"><div class="col-sm-3"><img src="http://image005.flaticon.com/28/svg/33/33409.svg" class="img-fluid"/></div><div class="col-sm-9"><h4>'+ response.destination +'</h4><p>' + response.duration +'</p><p><button class="btn btn-info">Save Trip</button></p></div></div></div></div>')
     });
   });
 
