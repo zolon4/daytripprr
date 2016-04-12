@@ -42,12 +42,24 @@ router.get('/profile', authenticatedUser, function(req,res,next){
 
 /*GET trip search page. */
 router.get('/search', authenticatedUser, function(req, res, next){
-  var currentcity = req.user.local.currentcity
+  res.render('search');
+});
+
+router.post('/distance', function(req, res){
+  var currentcity = req.user.local.currentcity;
   var currentstate = req.user.local.currentstate;
   var origin = currentcity + ", " + currentstate;
 
-
-  res.render('search', {mapsKey: req.mapskey, origin: origin});
+  distance.get(
+  {
+    origin: origin,
+    destination: req.body.destination
+  },
+  function(err, data) {
+    if (err) return console.log(err);
+    console.log(data);
+    res.json(data);
+  });
 });
 
 /*GET trip show page. */
