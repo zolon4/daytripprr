@@ -4,7 +4,7 @@ var User = require('../models/user');
 var Trip = require('../models/trip');
 var user = new User();
 var secrets = require('../secrets');
-
+var distance = require('google-distance');
 
 function authenticatedUser(req, res, next) {
   // If the user is authenticated, then we can continue with next
@@ -51,8 +51,17 @@ router.get('/search', function(req, res, next){
   var city = user.local.currentcity;
   var origins = city+"+"+state;
   var destination = req.body.destination;
-  var url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + origins + "&destinations=" + destination +"&key=AIzaSyDgMqJxyCsHseyW46NTlu24EsYJsDE6Oc8"
-  console.log(url)
+  distance.get(
+    {
+      origin: origins,
+      destination: destination,
+      units: 'imperial'
+    },
+    function(err, data) {
+      if (err) return console.log(err);
+      console.log(data);
+  });
+
   res.render('search', {mapsKey: req.mapskey});
 });
 
