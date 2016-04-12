@@ -27,12 +27,15 @@ body {
 .btn {
  margin-top: 1%;
 }
-.form-control {
+
+.form-control-custom {
  border-top: none;
  border-left: none;
  border-right: none;
  border-radius: 0%;
 }
+
+
 .login-heading {
  font-size: 60px;
 }

@@ -13,11 +13,20 @@ var session = require('express-session');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+var sass = require('node-sass');
+sass.render({
+  file: '/stylesheets/app.scss',
+}, function(err, result) {});
+
+
 var app = express();
 
 var srcPath = __dirname + '/sass';
 var destPath = __dirname + '/public/styles';
 // OR
+
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
