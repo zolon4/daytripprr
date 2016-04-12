@@ -98,10 +98,13 @@ h4 {
  background-color: #3fd97f;
  height: 100vh;
 }
-p {
+#abt {
  margin-left: 10px;
  font-family: 'Open Sans', serif;
  color: white;
+}
+.btn-search {
+ margin-bottom: 5px;
 }
 .btn-signup {
  width: 300px;

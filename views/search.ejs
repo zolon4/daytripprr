@@ -1,12 +1,13 @@
 <% include ./partials/header %>
-
 <h1>Search page!</h1>
-<div class="form-group">
- <input id="destination" name="destination" type="text" class="form-control" placeholder="EX: Joshua Tree">
- <input type="submit" id="search" class="btn btn-primary btn-search" value="go">
+ <div class="form-group">
+  <div class="input-group">
+  <input id="destination" name="destination" type="text" class="form-control" placeholder="EX: Joshua Tree">
+  <span class="input-group-btn">
+   <input type="submit" id="search" class="btn btn-primary btn-search btn-md" value="go">
+  </span>
+ </div>
 </div>
-
-<p id="test"></p>
-
-
+ <div id="result">
+ </div>
 <% include ./partials/footer %>
