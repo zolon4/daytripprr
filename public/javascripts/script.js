@@ -11,7 +11,9 @@ var delayImage = function(image) {
 
 var getDistance = function(){
     var destination = $('#destination').val();
-    console.log(destination);
+    $.ajax({
+
+    })
 }
 
 $('#search').on('click', function(){

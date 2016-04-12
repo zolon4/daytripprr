@@ -16,6 +16,7 @@
     "express": "~4.13.1",
     "express-partials": "^0.3.0",
     "express-session": "^1.13.0",
+    "google-distance": "^1.0.1",
     "method-override": "^2.3.5",
     "mongoose": "^4.4.12",
     "morgan": "~1.6.1",
