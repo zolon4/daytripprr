@@ -50,6 +50,23 @@ router.get('/search', authenticatedUser, function(req, res, next){
   res.render('search', {mapsKey: req.mapskey, origin: origin});
 });
 
+router.post('/distance', function(req, res){
+  var currentcity = req.user.local.currentcity;
+  var currentstate = req.user.local.currentstate;
+  var origin = currentcity + ", " + currentstate;
+
+  distance.get(
+  {
+    origin: origin,
+    destination: req.body.destination
+  },
+  function(err, data) {
+    if (err) return console.log(err);
+    console.log(data);
+    res.json(data);
+  });
+});
+
 /*GET trip show page. */
 router.get('/:id', authenticatedUser, function(req, res, next){
   res.render('trip_show');
