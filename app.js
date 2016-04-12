@@ -67,10 +67,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // set passport config
 require('./config/passport')(passport);
 
-app.use(function(req, res, next) {
-  global.currentUser = req.user;
-  next();
-});
+
 
 var mongoose = require('mongoose');
 mongoose.connect(process.env.DB_CONN_DAYTRIPPRR);
@@ -81,6 +78,10 @@ app.use('/styles', sassMiddleware({
   debug: true,
   outputStyle: 'expanded'
 }));
+app.use(function(req, res, next) {
+  global.currentUser = req.user;
+  next();
+});
 
 app.use('/', routes);
 app.use('/users', users);

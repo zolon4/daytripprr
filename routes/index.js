@@ -42,21 +42,6 @@ router.get('/profile', authenticatedUser, function(req,res,next){
 
 /*GET trip search page. */
 router.get('/search', function(req, res, next){
-  var state = user.local.currentstate;
-  var city = user.local.currentcity;
-  var origins = city+"+"+state;
-  var destination = req.body.destination;
-  distance.get(
-    {
-      origin: origins,
-      destination: destination,
-      units: 'imperial'
-    },
-    function(err, data) {
-      if (err) return console.log(err);
-      console.log(data);
-  });
-
   res.render('search', {mapsKey: req.mapskey});
 });
 

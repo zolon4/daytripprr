@@ -1,3 +1,4 @@
+
 $(function(){
 
 var map = '<img id="theImg" src="http://images.clipartpanda.com/sun-transparent-background-sun_strong_bold_T.png" />'
@@ -8,7 +9,18 @@ var map = '<img id="theImg" src="http://images.clipartpanda.com/sun-transparent-
   },4800)
  }
 
+var getDistance = function(){
+  var currentCity = user.local.currentcity;
+  var currentState = user.local.currentstate;
+  var origin = currentCity + ", " + currentState;
+    console.log(origin);
 
+}
+
+$('#search').click(getDistance());
+
+
+getDistance();
 
 
  $('#bottom').click(function () {
