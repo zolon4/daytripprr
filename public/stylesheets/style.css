@@ -2,6 +2,7 @@
 body {
  background-color: #4aedd7;
 }
+
 .content {
  margin-left: 190px;
 }
@@ -46,11 +47,14 @@ body {
  font-family: 'Montserrat', serif;
 }
 
-#logo {
+#logo,#logo2 {
  font-size: 15em;
  text-align: center;
  font-family: 'Amatic SC', cursive;
  color: white;
+}
+#logo2 {
+ padding-top: 150px;
 }
 h4 {
  font-size: 2.3em;
@@ -64,6 +68,19 @@ h4 {
  background-color: white;
  height: 100px;
 }
+
+
+/* about */
+
+#about-logo {
+ background-color: #75c58e;
+ height: 100vh;
+}
+#about-content {
+ background-color: #2a9b8b;
+ height: 100vh;
+}
+
 
 /* sidebar */
 a:hover {

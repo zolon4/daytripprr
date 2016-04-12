@@ -13,29 +13,5 @@
   <link rel='stylesheet' href='/stylesheets/style.css'>
   <title>daytripprr</title>
  </head>
- <body>
+ <body id="alternate-body">
   <div class="container-fluid">
-   <div class="row">
-    <div class="col-sm-2 sidebar">
-     <h2 id="side-logo">daytrippr</h2>
-     <img src="https://cdn1.vox-cdn.com/uploads/blog/sbnu_logo_minimal/237/large_mwcconnection.com.minimal.png" class="center-block mountain"/>
-      <ul class="nav nav-sidebar">
-       <a href="/search">
-        <li><i class="fa fa-search fa-3x"></i></li>
-       </a>
-       <a href="/profile">
-         <li><i class="fa fa-user fa-3x"></i></li>
-       </a>
-       <% if (currentUser) { %>
-       <a href="/saved">
-        <li><i class="fa fa-star fa-3x"></i></li>
-       </a>
-
-       <a href="/users/logout">
-        <li><i class="fa fa-sign-out fa-3x"></i></li>
-       </a>
-      </ul>
-      <% } %>
-     </div>
-
-     <div class="col-sm-10 content">

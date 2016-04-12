@@ -31,6 +31,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express'});
 });
 
+router.get('/about', function(req,res,next){
+ res.render('about')
+})
+
 router.get('/profile', authenticatedUser, function(req,res,next){
  var user = User.findOne({},'username email currentcity',function(err,user){
        if (err)
