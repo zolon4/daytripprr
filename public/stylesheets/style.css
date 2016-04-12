@@ -101,6 +101,10 @@ p {
  font-family: 'Open Sans', serif;
  color: white;
 }
+.btn-signup {
+ width: 300px;
+text-align: center;
+}
 /* sidebar */
 a:hover {
  color: #d3d3d3;
