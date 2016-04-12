@@ -40,11 +40,6 @@ router.get('/profile', authenticatedUser, function(req,res,next){
    });
 })
 
-/*GET saved trips page. */
-router.get('/saved', authenticatedUser, function(req, res, next){
-  res.render('saved');
-});
-
 /*GET trip search page. */
 router.get('/search', function(req, res, next){
   res.render('search');

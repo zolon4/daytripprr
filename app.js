@@ -9,6 +9,8 @@ var sassMiddleware = require('node-sass-middleware');
 var passport = require('passport');
 var flash = require('connect-flash');
 var session = require('express-session');
+var connect        = require('connect');
+var methodOverride = require('method-override');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -43,6 +45,14 @@ app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(methodOverride(function(req, res){
+  if (req.body && typeof req.body === 'object' && '_method' in req.body) {
+    // look in urlencoded POST bodies and delete it
+    var method = req.body._method
+    delete req.body._method
+    return method
+  }
+}));
 app.use(cookieParser());
 app.use(
    sassMiddleware({
@@ -61,11 +71,6 @@ app.use(function(req, res, next) {
   global.currentUser = req.user;
   next();
 });
-//custom middleware to allow global access to currentUser variable
-// app.use(function(req, res, next){
-//   global.currentUser = req.user;
-//   next();
-// })
 
 var mongoose = require('mongoose');
 mongoose.connect(process.env.DB_CONN_DAYTRIPPRR);
