@@ -54,7 +54,10 @@ body {
  color: white;
 }
 #logo2 {
- padding-top: 150px;
+ padding-top: 0px;
+}
+#theImg {
+ width: 200px;
 }
 h4 {
  font-size: 2.3em;
@@ -73,15 +76,31 @@ h4 {
 /* about */
 
 #about-logo {
- background-color: #75c58e;
+ background-color: #4aedd7;;
  height: 100vh;
 }
 #about-content {
  background-color: #2a9b8b;
+ height: 100%;
+}
+#about {
+ text-align: center;
+ font-size: 100px;
+ font-family: 'Lato', serif;
+}
+.img-compass {
+ width: 70%;
+ margin: 90px auto;
+}
+.about-text {
+ background-color: #3fd97f;
  height: 100vh;
 }
-
-
+p {
+ margin-left: 10px;
+ font-family: 'Open Sans', serif;
+ color: white;
+}
 /* sidebar */
 a:hover {
  color: #d3d3d3;
@@ -90,6 +109,7 @@ a:hover {
 .mountain {
  width: 100%;
 }
+
 #side-logo {
  text-align: center;
  font-family: 'Amatic SC', cursive;
@@ -98,6 +118,7 @@ a:hover {
 .login-btn {
  text-align: right;
 }
+
 .sidebar {
  position: fixed;
  width: 190px;
@@ -139,6 +160,11 @@ a:hover {
 }
 #info {
  margin-top: 60px;
+}
+
+.custom-card {
+ height: 100vh;
+ text-align: left;
 }
 @media screen and (max-width: 1000px) {
  #name {
