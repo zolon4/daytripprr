@@ -9,8 +9,9 @@ var sassMiddleware = require('node-sass-middleware');
 var passport = require('passport');
 var flash = require('connect-flash');
 var session = require('express-session');
-var connect        = require('connect');
+var connect = require('connect');
 var methodOverride = require('method-override');
+var secrets = require('./secrets');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -19,7 +20,6 @@ var sass = require('node-sass');
 sass.render({
   file: '/stylesheets/app.scss',
 }, function(err, result) {});
-
 
 var app = express();
 
