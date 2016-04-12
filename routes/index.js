@@ -3,7 +3,7 @@ var router = express.Router();
 var User = require('../models/user');
 var Trip = require('../models/trip');
 var user = new User();
-
+var secrets = require('../secrets');
 
 
 function authenticatedUser(req, res, next) {
@@ -28,6 +28,7 @@ function unAuthenticatedUser(req, res, next) {
 
 router.get('/', function(req, res, next) {
   res.render('about', { title: 'Express'});
+
 });
 
 router.get('/profile', authenticatedUser, function(req,res,next){
@@ -35,13 +36,19 @@ router.get('/profile', authenticatedUser, function(req,res,next){
        if (err)
        console.log('error occured in the database');
        console.log(user)
-       res.render('profile', {user: req.user})
+       res.render('profile', {user: req.user});
    });
 })
 
 /*GET trip search page. */
 router.get('/search', function(req, res, next){
-  res.render('search');
+  var state = user.local.currentstate;
+  var city = user.local.currentcity;
+  var origins = city+"+"+state;
+  var destination = req.body.destination;
+  var url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + origins + "&destinations=" + destination +"&key=AIzaSyDgMqJxyCsHseyW46NTlu24EsYJsDE6Oc8"
+  console.log(url)
+  res.render('search', {mapsKey: req.mapskey});
 });
 
 /*GET trip show page. */
