@@ -57,7 +57,6 @@ router.post('/distance', function(req, res){
   },
   function(err, data) {
     if (err) return console.log(err);
-    console.log(data);
     res.json(data);
   });
 });
