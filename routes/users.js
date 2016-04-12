@@ -4,6 +4,23 @@ var passport = require('passport');
 var User = require('../models/user');
 var Trip = require('../models/trip');
 
+function authenticatedUser(req, res, next) {
+  // If the user is authenticated, then we can continue with next
+  // https://github.com/jaredhanson/passport/blob/a892b9dc54dce34b7170ad5d73d8ccfba87f4fcf/lib/passport/http/request.js#L74
+  if (req.isAuthenticated()) return next();
+
+  // Otherwise
+  req.flash('errorMessage', 'Login to access!');
+  return res.redirect('/users/login');
+}
+
+function unAuthenticatedUser(req, res, next) {
+  if (!req.isAuthenticated()) return next();
+
+  // Otherwise
+  req.flash('errorMessage', 'You are already logged in!');
+  return res.redirect('/');
+}
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -43,7 +60,7 @@ router.get('/logout', function(req, res) {
   });
 
 /*GET user settings page. */
-router.get('/settings', function(req, res, next){
+router.get('/settings', authenticatedUser, function(req, res, next){
   console.log(req.user);
   var user = User.findOne({}, 'username email currentcity currentstate', function(err, user){
     console.log('form')

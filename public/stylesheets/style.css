@@ -35,11 +35,11 @@ body {
  border-radius: 0%;
 }
 
-
-.login-heading {
+.login-heading,.settings-heading {
  font-size: 60px;
 }
-#login, #signup {
+
+#login, #signup, #settings {
  margin-top: 30px;
  width: 80%;
  margin: 40px auto;
