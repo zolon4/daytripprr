@@ -1,34 +1,29 @@
-
 <% include ./partials/header %>
-<div id="settings">
-<div class="card">
- <h1 class="settings-heading">Settings</h1>
- <div class="card-block">
-<form action="/users/settings" method="post">
-     <input type="hidden" name="_method" value="put" />
-     <div class="form-group">
-        <label>Username</label>
-        <input type="text" class="form-control form-control-custom" name="username" value="<%= user.local.username %>">
-    </div>
-
+ <div id="settings">
+  <div class="card">
+   <h1 class="settings-heading">Settings</h1>
+  <div class="card-block">
+   <form action="/users/settings" method="post">
+    <input type="hidden" name="_method" value="put" />
     <div class="form-group">
-        <label>Email</label>
-        <input type="text" class="form-control form-control-custom" name="email" value="<%= user.local.email %>">
+     <label>Username</label>
+     <input type="text" class="form-control form-control-custom" name="username" value="<%= user.local.username %>">
     </div>
-
-     <div class="form-group">
-        <label>City</label>
-        <input type="text" class="form-control form-control-custom" name="currentcity" value="<%= user.local.currentcity %>">
-    </div>
-
-     <div class="form-group">
-        <label>State</label>
-        <input type="text" class="form-control form-control-custom" name="currentstate" value="<%= user.local.currentstate %>">
-    </div>
-
-    <button type="submit" class="btn btn-warning btn-block">Update</button>
-</form>
-</div>
-</div>
+    <div class="form-group">
+     <label>Email</label>
+     <input type="text" class="form-control form-control-custom" name="email" value="<%= user.local.email %>">
+   </div>
+    <div class="form-group">
+     <label>City</label>
+     <input type="text" class="form-control form-control-custom" name="currentcity" value="<%= user.local.currentcity %>">
+   </div>
+    <div class="form-group">
+     <label>State</label>
+     <input type="text" class="form-control form-control-custom" name="currentstate" value="<%= user.local.currentstate %>">
+   </div>
+   <button type="submit" class="btn btn-warning btn-block">Update</button>
+  </form>
+  </div>
+ </div>
 </div>
 <% include ./partials/footer %>
