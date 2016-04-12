@@ -41,8 +41,13 @@ router.get('/profile', authenticatedUser, function(req,res,next){
 })
 
 /*GET trip search page. */
-router.get('/search', function(req, res, next){
-  res.render('search', {mapsKey: req.mapskey});
+router.get('/search', authenticatedUser, function(req, res, next){
+  var currentcity = req.user.local.currentcity
+  var currentstate = req.user.local.currentstate;
+  var origin = currentcity + ", " + currentstate;
+
+
+  res.render('search', {mapsKey: req.mapskey, origin: origin});
 });
 
 /*GET trip show page. */
