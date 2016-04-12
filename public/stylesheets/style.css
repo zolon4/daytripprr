@@ -72,11 +72,13 @@ h4 {
  height: 100px;
 }
 
-
+.text-right {
+ text-align: right;
+}
 /* about */
 
 #about-logo {
- background-color: #4aedd7;;
+ background-color: #03232E;
  height: 100vh;
 }
 #about-content {

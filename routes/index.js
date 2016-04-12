@@ -24,16 +24,11 @@ function unAuthenticatedUser(req, res, next) {
   return res.redirect('/');
 }
 
-
 /* GET home page. */
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express'});
+  res.render('about', { title: 'Express'});
 });
-
-router.get('/about', function(req,res,next){
- res.render('about')
-})
 
 router.get('/profile', authenticatedUser, function(req,res,next){
  var user = User.findOne({},'username email currentcity',function(err,user){

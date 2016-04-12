@@ -1,11 +1,15 @@
 $(function(){
-var map = '<img id="theImg" src="http://www.aperfectworld.org/clipart/seasons/sun.png" />'
+var map = '<img id="theImg" src="http://images.clipartpanda.com/sun-transparent-background-sun_strong_bold_T.png" />'
 
  var delayImage = function(image) {
   setTimeout(function(){
    $('#map').append(map)
   },4800)
  }
+
+
+
+
  $('#bottom').click(function () {
           $('html, body').animate({
               scrollTop: $(document).height()
@@ -19,8 +23,15 @@ var map = '<img id="theImg" src="http://www.aperfectworld.org/clipart/seasons/su
         typeSpeed: 40,
         showCursor: false
       });
-  delayImage(map)
 
+
+
+   $('#are').typed({
+    strings: ["^4800 are we there yet?"],
+    typeSpeed: 35,
+    showCursor: false
+   })
+  delayImage(map)
 
 
 })
