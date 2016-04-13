@@ -13,7 +13,7 @@ var map = '<img id="theImg" src="http://images.clipartpanda.com/sun-transparent-
 
     var saveTrip = '<form id="ABC" action="/search" method="post"><div class="form-group"><input type="hidden" name="destination" value="'+ response.destination +'"><input type="hidden" name="distance" value="'+response.distance+'"><input type="hidden"  name="duration" value="'+response.duration+'"><input type="hidden" class="form-control form-control-custom" name="origin" value="'+response.origin+'"></div><button id="saveTrip" type="submit" class="btn btn-warning btn-block">Save</button></form> '
 
-     $('#result').prepend('<div class="card"><div class="card-block"><div class="row"><div class="col-sm-3"><img src="http://image005.flaticon.com/28/svg/33/33409.svg" class="img-fluid"/></div><div class="col-sm-9"><a target="_blank" href="https://www.google.com/maps/dir/'+response.origin+'/'+response.destination+'/"><h4>'+ response.destination +'</h4><p>' + response.duration +'</p><p>'+ saveTrip +'</p></div></div></div></div>');
+     $('#result').prepend('<div class="card"><div class="card-block"><div class="row"><div class="col-sm-3"><img src="http://image005.flaticon.com/28/svg/33/33409.svg" class="img-fluid"/></div><div class="col-sm-9"><a target="_blank" href="https://www.google.com/maps/dir/'+response.origin+'/'+response.destination+'/"><h4>'+ response.destination +'</h4><p>' + response.duration +'</p><img src="https://maps.googleapis.com/maps/api/staticmap?size=500x400&path=color:0x0000ff|weight:5|' + response.origin + '|' + response.destination +'><p>'+ saveTrip +'</p></div></div></div></div>');
 
       $('#saveTrip').on('click', function(){
        { saveTrip: $('#ABC').val(); }
