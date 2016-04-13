@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var User = require('../models/user');
 var Trip = require('../models/trip');
+var trip = new Trip();
 var user = new User();
 var secrets = require('../secrets');
 var distance = require('google-distance');
@@ -40,10 +41,32 @@ router.get('/profile', authenticatedUser, function(req,res,next){
    });
 })
 
+
+
 /*GET trip search page. */
 router.get('/search', authenticatedUser, function(req, res, next){
-  res.render('search');
+  var id = req.user.id;
+  res.render('search',{id: id});
 });
+
+router.post('/search', function(req, res, next){
+  var userid = req.user.id;
+      var trip = Trip({
+        destination: req.body.destination,
+        origin: req.body.origin,
+        distance: req.body.distance,
+        duration: req.body.duration,
+        userId: userid
+
+      })
+
+        trip.save(function(err) {
+            if (err) console.log(err);
+            res.json(trip);
+        });
+
+
+})
 
 router.post('/distance', function(req, res){
   var currentcity = req.user.local.currentcity;
@@ -60,6 +83,8 @@ router.post('/distance', function(req, res){
     res.json(data);
   });
 });
+
+
 
 /*GET trip show page. */
 router.get('/:id', authenticatedUser, function(req, res, next){
