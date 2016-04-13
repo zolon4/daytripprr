@@ -33,12 +33,11 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/profile', authenticatedUser, function(req,res,next){
- var user = User.findOne({},'username email currentcity',function(err,user){
-       if (err)
-       console.log('error occured in the database');
-       console.log(user)
-       res.render('profile', {user: req.user});
-   });
+  var trips = Trip.find({userId: req.user._id}, '', function(err,trip){
+   if(err) console.log(err)
+   console.log(trip)
+   res.render('profile', {user: req.user, trips: trip});
+ })
 })
 
 
@@ -62,7 +61,7 @@ router.post('/search', function(req, res, next){
 
         trip.save(function(err) {
             if (err) console.log(err);
-            res.json(trip);
+            res.redirect('/profile');
         });
 
 
