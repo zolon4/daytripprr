@@ -72,7 +72,7 @@ router.post('/:id/complete', function(req, res, next) {
   });
 });
 
-router.delete('/:id/delete', function(req, res, next) {
+router.post('/:id/delete/', function(req, res, next) {
   Trip.findByIdAndRemove(req.params.id, function(err) {
     if (err) console.log(err);
     res.redirect('/profile')
