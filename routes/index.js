@@ -95,13 +95,15 @@ router.post('/distance', function(req, res){
   });
 });
 
+router.get('/test', function(req, res, next){
+  res.render('test');
+})
 
 
 /*GET trip show page. */
 router.get('/:id', authenticatedUser, function(req, res, next){
   res.render('trip_show');
 });
-
 
 
 module.exports = router;
