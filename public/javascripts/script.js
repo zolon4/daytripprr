@@ -8,9 +8,8 @@ $(function(){
      $('#result').prepend('<div class="card"><div class="card-block"><div class="row"><div class="col-sm-3"><img src="http://image005.flaticon.com/28/svg/33/33409.svg" class="img-fluid"/></div><div class="col-sm-9"><a target="_blank" href="https://www.google.com/maps/dir/'+response.origin+'/'+response.destination+'/"><h4>'+ response.destination +'</h4></a><p>' + response.duration +'</p></div></div></div></div>')
     });
   });
-
+  
   var map = '<img id="theImg" src="http://images.clipartpanda.com/sun-transparent-background-sun_strong_bold_T.png" />'
-
   var delayImage = function(image) {
     setTimeout(function(){
     $('#map').append(map)
