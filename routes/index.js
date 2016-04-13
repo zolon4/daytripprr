@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var User = require('../models/user');
 var Trip = require('../models/trip');
+var trip = new Trip();
 var user = new User();
 var secrets = require('../secrets');
 var distance = require('google-distance');
@@ -40,6 +41,12 @@ router.get('/profile', authenticatedUser, function(req,res,next){
    });
 })
 
+router.post('/search', function(req, res, next){
+  var id = req.user.id;
+  trip.save
+
+})
+
 /*GET trip search page. */
 router.get('/search', authenticatedUser, function(req, res, next){
   var id = req.user.id;
@@ -62,6 +69,8 @@ router.post('/distance', function(req, res){
     res.json(data);
   });
 });
+
+
 
 /*GET trip show page. */
 router.get('/:id', authenticatedUser, function(req, res, next){
