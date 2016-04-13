@@ -35,10 +35,11 @@ router.get('/', function(req, res, next) {
 router.get('/profile', authenticatedUser, function(req,res,next){
   var trips = Trip.find({userId: req.user._id}, '', function(err,trip){
    if(err) console.log(err)
-   console.log(trip)
-   res.render('profile', {user: req.user, trips: trip});
+   console.log(trip.reverse())
+   res.render('profile', {user: req.user, trips: trip.reverse()});
  })
 })
+
 
 
 
@@ -56,16 +57,27 @@ router.post('/search', function(req, res, next){
         distance: req.body.distance,
         duration: req.body.duration,
         userId: userid
-
       })
-
         trip.save(function(err) {
             if (err) console.log(err);
             res.redirect('/profile');
         });
 
-
 })
+
+router.post('/:id/complete', function(req, res, next) {
+  Trip.findByIdAndUpdate(req.params.id, { completed: true }, function(err, trip) {
+    if (err) console.log(err);
+    res.redirect('/profile')
+  });
+});
+
+router.delete('/:id/delete', function(req, res, next) {
+  Trip.findByIdAndRemove(req.params.id, function(err) {
+    if (err) console.log(err);
+    res.redirect('/profile')
+  });
+});
 
 router.post('/distance', function(req, res){
   var currentcity = req.user.local.currentcity;
