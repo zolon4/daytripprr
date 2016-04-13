@@ -10,17 +10,17 @@
  </div>
  <div class="col-sm-10 content-prof">
   <ul class="list-group">
-   <h2>My Trips</h2>
+   <h2>Trips I want to take</h2>
     <% trips.reverse().forEach(function(trip){ %>
      <%if(trip.completed == null) {%>
       <li class="list-group-item">
        <div class="row">
-        <div class="col-sm-2">
-         <img src="http://image005.flaticon.com/28/svg/33/33409.svg" class="img-fluid"/>
+        <div class="col-sm-3">
+         <iframe id='youframe' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/directions?key=AIzaSyC-EwkbLF1DAAx4XVC7935uSXUEtiM68iM&origin=<%=trip.origin %>&destination=<%= trip.destination%>'></iframe>
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-8">
          <a target="_blank" href="https://www.google.com/maps/dir/<%= trip.origin %>/<%= trip.destination %>"><h1><%= trip.destination %></h1></a>
-         <p>Trip Time: <%= trip.duration %></p>
+         <p>Estimated Drive Time: <%= trip.duration %></p>
          <p>Starting Point: <%= trip.origin %></p>
         </div>
         <div class="col-sm-1">
@@ -36,17 +36,17 @@
     <% }}) %>
    </ul>
  <ul class="list-group">
-  <h2>Places I've been</h2>
+  <h2>Trips I've taken</h2>
    <% trips.forEach(function(trip){ %>
     <% if(trip.completed == true) {%>
      <li class="list-group-item">
       <div class="row">
-       <div class="col-sm-2">
-        <img src="http://image005.flaticon.com/28/svg/33/33409.svg" class="img-fluid"/>
+       <div class="col-sm-3">
+        <iframe id='youframe' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/directions?key=AIzaSyC-EwkbLF1DAAx4XVC7935uSXUEtiM68iM&origin=<%=trip.origin %>&destination=<%= trip.destination%>'></iframe>
        </div>
-       <div class="col-sm-9">
+       <div class="col-sm-8">
         <a target="_blank" href="https://www.google.com/maps/dir/<%= trip.origin %>/<%= trip.destination %>"><h1><%= trip.destination %></h1></a>
-        <p>Trip Time: <%= trip.duration %></p>
+        <p>Estimated Drive Time: <%= trip.duration %></p>
         <p>Starting Point: <%= trip.origin %></p>
        </div>
        <div class="col-sm-1">

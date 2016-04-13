@@ -112,7 +112,7 @@ h4 {
  margin-bottom: 5px;
 }
 .btn-signup {
- width: 300px;
+width: 20%;
 text-align: center;
 }
 /* sidebar */
@@ -195,6 +195,18 @@ iframe {
  margin: 0 auto;
  width: 100%;
 }
+
+
+.search-input {
+ width: 100%;
+}
+.btn-block {
+ margin-top: 3%;
+}
+
+
+
+
 @media screen and (max-width: 1000px) {
  #name {
   font-size: 1.8em;

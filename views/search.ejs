@@ -1,11 +1,14 @@
 <% include ./partials/header %>
-<h1>Where do you want to go?</h1>
- <div class="form-group">
-  <div class="input-group">
-  <input id="destination" name="destination" type="text" class="form-control" placeholder="EX: Joshua Tree">
-  <span class="input-group-btn">
-   <input type="submit" id="search" class="btn btn-primary" value="go">
-  </span>
+
+   <h1>Where do you want to go?</h1>
+    <div class="form-group">
+     <div class="input-group search-input">
+     <input id="destination" name="destination" type="text" class="form-control" placeholder="EX: Joshua Tree">
+      <input type="submit" id="search" class="btn btn-primary btn-block" value="go">
+    </div>
+   </div>
+
+    <div id="result"></div>
  </div>
- <div id="result"></div>
+
 <% include ./partials/footer %>
