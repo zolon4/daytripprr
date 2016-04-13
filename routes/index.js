@@ -4,7 +4,6 @@ var User = require('../models/user');
 var Trip = require('../models/trip');
 var trip = new Trip();
 var user = new User();
-var secrets = require('../secrets');
 var distance = require('google-distance');
 
 function authenticatedUser(req, res, next) {

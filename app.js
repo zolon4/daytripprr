@@ -11,7 +11,6 @@ var flash = require('connect-flash');
 var session = require('express-session');
 var connect = require('connect');
 var methodOverride = require('method-override');
-var secrets = require('./secrets');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');

@@ -3,7 +3,6 @@ var router = express.Router();
 var passport = require('passport');
 var User = require('../models/user');
 var Trip = require('../models/trip');
-var secrets = require('../secrets');
 
 function authenticatedUser(req, res, next) {
   // If the user is authenticated, then we can continue with next
