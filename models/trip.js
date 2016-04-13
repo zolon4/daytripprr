@@ -5,7 +5,8 @@ var tripSchema = new mongoose.Schema({
     origin: {type: String, required: true},
     distance: {type: String, required: true},
     duration: {type: String, required: true},
-    userId: String
+    userId: String,
+    completed: Boolean
 });
 
 var Trip = mongoose.model('Trip', tripSchema)
