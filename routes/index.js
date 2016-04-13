@@ -42,7 +42,8 @@ router.get('/profile', authenticatedUser, function(req,res,next){
 
 /*GET trip search page. */
 router.get('/search', authenticatedUser, function(req, res, next){
-  res.render('search');
+  var id = req.user.id;
+  res.render('search',{id: id});
 });
 
 router.post('/distance', function(req, res){
