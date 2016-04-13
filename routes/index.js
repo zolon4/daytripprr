@@ -62,7 +62,7 @@ router.post('/search', function(req, res, next){
 
         trip.save(function(err) {
             if (err) console.log(err);
-            res.json(trip);
+            res.redirect('/profile');
         });
 
 
