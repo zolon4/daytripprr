@@ -1,9 +1,10 @@
 var mongoose = require('mongoose');
 
 var tripSchema = new mongoose.Schema({
- desination: {type: String, required: true },
- startPoint: { type: String, required: true, unique: true},
- housing: Number
+    destination: {type: String, required: true},
+    distance: {type: String, required: true},
+    duration: {type: String, required: true},
+     userId: String
 });
 
 var Trip = mongoose.model('Trip', tripSchema)

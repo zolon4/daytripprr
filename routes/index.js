@@ -41,17 +41,30 @@ router.get('/profile', authenticatedUser, function(req,res,next){
    });
 })
 
-router.post('/search', function(req, res, next){
-  var id = req.user.id;
-  trip.save
 
-})
 
 /*GET trip search page. */
 router.get('/search', authenticatedUser, function(req, res, next){
   var id = req.user.id;
   res.render('search',{id: id});
 });
+
+router.post('/search', function(req, res, next){
+  var id = req.user.id;
+          trip;
+            trip.destination = req.body.destination
+            trip.origin = req.body.origin
+            trip.distance = req.body.distance
+            trip.duration = req.body.duration
+
+            trip.save(function(err) {
+                if (err)
+                    throw err;
+                return done(null, trip);
+            });
+
+
+})
 
 router.post('/distance', function(req, res){
   var currentcity = req.user.local.currentcity;
