@@ -10,7 +10,7 @@ var map = '<img id="theImg" src="http://images.clipartpanda.com/sun-transparent-
       data: { destination: $('#destination').val() }
     }).done(function(response){
       console.log('test 2');
-        var map = 'id="youframe" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyC-EwkbLF1DAAx4XVC7935uSXUEtiM68iM&origin=' + response.origin + '&destination=' + response.destination + '"';
+        var map = "id='youframe' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/directions?key=AIzaSyC-EwkbLF1DAAx4XVC7935uSXUEtiM68iM&origin=" + response.origin + "&destination=" + response.destination + "'";
 
       var saveTrip = '<form id="ABC" action="/search" method="post"><div class="form-group"><input type="hidden" name="destination" value="'+ response.destination +'"><input type="hidden" name="distance" value="'+response.distance+'"><input type="hidden"  name="duration" value="'+response.duration+'"><input type="hidden" class="form-control form-control-custom" name="origin" value="'+response.origin+'"><input type="hidden" class="form-control form-control-custom" name="map" value="'+ map +'"></div><button id="saveTrip" type="submit" class="btn btn-warning btn-block">Save</button></form> '
       console.log(saveTrip);
