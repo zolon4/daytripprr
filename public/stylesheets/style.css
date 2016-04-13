@@ -170,7 +170,7 @@ a:hover {
  position: fixed;
 }
 
-#complete-button {
+#complete-button,#delete {
  background-color: transparent;
  border: none;
 }

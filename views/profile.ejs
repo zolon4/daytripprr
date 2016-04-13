@@ -27,7 +27,9 @@
          <form action="/<%= trip.id %>/complete" method="post">
           <button id="complete-button" type="submit" value="" class="fa fa-check fa-2x"></button>
          </form>
-         <i class="fa fa-trash-o fa-2x"></i>
+         <form action="/<%= trip.id %>/delete/" method="post">
+          <button id="delete" type="submit" value="" class="fa fa-trash-o fa-2x"></button>
+         </form>
         </div>
        </div>
       </li>
