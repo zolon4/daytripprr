@@ -27,32 +27,10 @@ var map = '<img id="theImg" src="http://images.clipartpanda.com/sun-transparent-
 
   });
 
-  $('#complete').on('click', function(){
-   $.ajax({
-     url: '/' + response._id + '/complete',
-     method: 'PUT',
-     data: {
-      completed: true
-     }
-   })
-   .done(function(data) {
-     console.log('The updated todo: ', data);
-     redirect('/profile')
-   })
 
-  })
 
-  $('#delete').on('click', function(){
-   $.ajax({
-     url: '/' + response._id +'/delete',
-     method: 'DELETE',
-     data: {
-     }
-   })
-   .done(function(data) {
-     console.log('The updated todo: ', data);
-   })
- })
+
+
 
 
 

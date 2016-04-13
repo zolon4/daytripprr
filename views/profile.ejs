@@ -25,7 +25,7 @@
         </div>
         <div class="col-sm-1">
          <form action="/<%= trip.id %>/complete" method="post">
-          <button id="complete-button"type="submit" value="" class="fa fa-check fa-2x"></button>
+          <button id="complete-button" type="submit" value="" class="fa fa-check fa-2x"></button>
          </form>
          <i class="fa fa-trash-o fa-2x"></i>
         </div>
@@ -48,7 +48,7 @@
         <p>Starting Point: <%= trip.origin %></p>
        </div>
        <div class="col-sm-1">
-        <form action="/<%= trip.id %>/delete" method="delete">
+        <form action="/<%= trip.id %>/delete/" method="post">
          <button id="delete" type="submit" value="" class="fa fa-trash-o fa-2x"></button>
         </form>
        </div>
