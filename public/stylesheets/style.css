@@ -190,6 +190,11 @@ a:hover {
  height: 100vh;
  text-align: left;
 }
+
+iframe {
+ margin: 0 auto;
+ width: 100%;
+}
 @media screen and (max-width: 1000px) {
  #name {
   font-size: 1.8em;

@@ -22,6 +22,7 @@ sass.render({
 }, function(err, result) {});
 
 var app = express();
+var server = app.listen(process.env.PORT || 8080);
 
 var srcPath = __dirname + '/sass';
 var destPath = __dirname + '/public/styles';
