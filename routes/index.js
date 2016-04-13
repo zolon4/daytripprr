@@ -50,18 +50,20 @@ router.get('/search', authenticatedUser, function(req, res, next){
 });
 
 router.post('/search', function(req, res, next){
-  var id = req.user.id;
-          trip;
-            trip.destination = req.body.destination
-            trip.origin = req.body.origin
-            trip.distance = req.body.distance
-            trip.duration = req.body.duration
+  var userid = req.user.id;
+      var trip = Trip({
+        destination: req.body.destination,
+        origin: req.body.origin,
+        distance: req.body.distance,
+        duration: req.body.duration,
+        userId: userid
 
-            trip.save(function(err) {
-                if (err)
-                    throw err;
-                return done(null, trip);
-            });
+      })
+
+        trip.save(function(err) {
+            if (err) console.log(err);
+            res.json(trip);
+        });
 
 
 })
