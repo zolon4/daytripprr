@@ -6,6 +6,7 @@ var tripSchema = new mongoose.Schema({
     distance: {type: String, required: true},
     duration: {type: String, required: true},
     userId: String,
+    map: String,
     completed: Boolean
 });
 

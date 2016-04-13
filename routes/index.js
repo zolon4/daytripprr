@@ -56,7 +56,8 @@ router.post('/search', function(req, res, next){
         origin: req.body.origin,
         distance: req.body.distance,
         duration: req.body.duration,
-        userId: userid
+        userId: userid,
+        map: req.body.map
       })
         trip.save(function(err) {
             if (err) console.log(err);
