@@ -2,7 +2,12 @@
 body {
  background-color: #4aedd7;
 }
-
+.list-group {
+ margin-top: 2%;
+}
+.list-group-item {
+ margin-top: 1%;
+}
 .content {
  margin-left: 190px;
 }

@@ -1,6 +1,6 @@
 <% include ./partials/header %>
  <div class="row">
-  <div class="col-sm-3 user-profile">
+  <div class="col-sm-2 user-profile">
    <img class="img-fluid user-profile-img img-circle" src="http://www.aperfectworld.org/clipart/seasons/sun.png">
    <div id="info">
    <h4 id="name"><%= user.local.username %></h4>
@@ -8,7 +8,28 @@
     <a href="/users/settings"><i class="fa fa-cog fa-3x"></i></a>
    </div>
  </div>
- <div class="col-sm-9">
+ <div class="col-sm-10">
+  <ul class="list-group">
+  <% trips.forEach(function(trip){ %>
+   <li class="list-group-item">
+    <div class="row">
+     <div class="col-sm-2">
+    <img src="http://image005.flaticon.com/28/svg/33/33409.svg" class="img-fluid"/>
+   </div>
+   <div class="col-sm-9">
+    <a target="_blank" href="https://www.google.com/maps/dir/<%= trip.origin %>/<%= trip.destination %>"><h1><%= trip.destination %></h1></a>
+    <p>Trip Time: <%= trip.duration %></p>
+    <p>Starting Point: <%= trip.origin %></p>
+   </div>
+   <div class="col-sm-1">
+    <i class="fa fa-check fa-2x"></i>
+    <i class="fa fa-trash-o fa-2x"></i>
+
+   </div>
+  </div>
+   </li>
+  <% }) %>
+ </ul>
  </div>
 </div>
 <% include ./partials/footer %>
