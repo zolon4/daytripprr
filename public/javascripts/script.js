@@ -11,18 +11,21 @@ var map = '<img id="theImg" src="http://images.clipartpanda.com/sun-transparent-
     }).done(function(response){
       console.log('test 2');
 
-    var saveTrip = '<form id="ABC" action="/search" method="post"><div class="form-group"><input type="hidden" name="destination" value="'+ response.destination +'"><input type="hidden" name="distance" value="'+response.distance+'"><input type="hidden"  name="duration" value="'+response.duration+'"><input type="hidden" class="form-control form-control-custom" name="origin" value="'+response.origin+'"></div><button id="saveTrip" type="submit" class="btn btn-warning btn-block">Save</button></form> '
-    console.log(saveTrip);
+      var saveTrip = '<form id="ABC" action="/search" method="post"><div class="form-group"><input type="hidden" name="destination" value="'+ response.destination +'"><input type="hidden" name="distance" value="'+response.distance+'"><input type="hidden"  name="duration" value="'+response.duration+'"><input type="hidden" class="form-control form-control-custom" name="origin" value="'+response.origin+'"></div><button id="saveTrip" type="submit" class="btn btn-warning btn-block">Save</button></form> '
+      console.log(saveTrip);
 
-    var map = 'width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC-EwkbLF1DAAx4XVC7935uSXUEtiM68iM%20&q=Space+Needle,Seattle+WA"';
-    console.log(map);
+      var map = 'width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyC-EwkbLF1DAAx4XVC7935uSXUEtiM68iM&origin=' + response.origin + '&destination=' + response.destination + '"';
+      console.log(map);
 
-     $('#result').prepend('<div class="card"><div class="card-block"><div class="row"><div class="col-sm-3"><img src="http://image005.flaticon.com/28/svg/33/33409.svg" class="img-fluid"/></div><div class="col-sm-9"><a target="_blank" href="https://www.google.com/maps/dir/'+response.origin+'/'+response.destination+'/"><h4>'+ response.destination +'</h4><p>' + response.duration +'</p><img src="https://maps.googleapis.com/maps/api/staticmap?size=500x400&path=color:0x0000ff|weight:5|' + response.origin + '|' + response.destination +'><br><iframe'+ map +'></iframe>' + saveTrip +'</p></div></div></div></div>');
-     debugger;
-      $('#saveTrip').on('click', function(){
-       { saveTrip: $('#ABC').val(); }
-        console.log('trip saved!');
-    })
+       $('#result').prepend('<div class="card"><div class="card-block"><div class="row"><div class="col-sm-3"><img src="http://image005.flaticon.com/28/svg/33/33409.svg" class="img-fluid"/></div><div class="col-sm-9"><a target="_blank" href="https://www.google.com/maps/dir/'+response.origin+'/'+response.destination+'/"><h4>' + response.destination + '</h4><p>' + response.duration + '</p><br><iframe ' + map + '></iframe>' + saveTrip +'</a></div></div></div></div>');
+       debugger;
+       // $('#result').prepend('<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC-EwkbLF1DAAx4XVC7935uSXUEtiM68iM&q=Space+Needle,Seattle+WA"> </iframe>');
+
+
+        $('#saveTrip').on('click', function(){
+         { saveTrip: $('#ABC').val(); }
+          console.log('trip saved!');
+      })
     });
 
   });
