@@ -1,17 +1,16 @@
 <% include ./partials/header %>
-
-   <h1>Where do you want to go?</h1>
-    <div class="form-group">
+<div id="search-page">
+ <h1 class="search-head">Where do you want to go?</h1>
+    <div id="search-form" class="form-group">
      <div class="input-group search-input">
-     <input id="origin" name="origin" type="text" class="form-control" placeholder="Where ya startin'?">
-     <input id="destination" name="destination" type="text" class="form-control" placeholder="Where ya goin'?">
-      <input type="submit" id="out_search" class="btn btn-primary btn-block" value="go">
+     <input id="origin" name="origin" type="text" class="form-control search" placeholder="Add a starting location">
+     <input id="destination" name="destination" type="text" class="form-control search" placeholder="Add a destination">
+     <div id="search">
+      <input type="submit" id="out_search" class="btn btn-primary btn-search btn-block" value="GO">
+     </div>
     </div>
    </div>
-
-    <div id="result"></div>
-
-    <h4>Want to save your trip? <a href="/users/signup">Sign up!</a></h4>
+  </div>
+   <div id="result"></div>
  </div>
-
 <% include ./partials/footer %>

@@ -1,5 +1,4 @@
 $(function(){
-
 var map = '<img id="theImg" src="http://images.clipartpanda.com/sun-transparent-background-sun_strong_bold_T.png" />'
 
 //Logged in search function
@@ -39,7 +38,7 @@ var map = '<img id="theImg" src="http://images.clipartpanda.com/sun-transparent-
 
       console.log(map);
 
-       $('#result').prepend('<div class="card"><div class="card-block"><div class="row"><div class="col-sm-4"><iframe ' + map + '></iframe></div><div class="col-sm-8"><a target="_blank" href="https://www.google.com/maps/dir/'+response.origin+'/'+response.destination+'/"><h4>' + response.origin + ' to ' + response.destination + '</h4></a><p>' + response.duration + '</p></a></div></div></div></div>');
+       $('#result').prepend('<div class="card"><div class="card-block"><div class="row"><div class="col-sm-4"><iframe ' + map + '></iframe></div><div class="col-sm-8"><a target="_blank" href="https://www.google.com/maps/dir/'+response.origin+'/'+response.destination+'/"><h4>' + response.origin + ' to ' + response.destination + '</h4></a><p>' + response.duration + '</p></a></div></div></div></div>   <h4 class="save-trip">Want to save your trip? <a href="/users/signup">Sign up!</a></h4>');
        debugger;
       })
     });

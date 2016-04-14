@@ -17,10 +17,7 @@ a{
 	a:hover{
 		color:#999;
 	}
-p{
-	line-height: 2em;
-	margin:0 0 20px;
-}
+
 
 .wrap{
 	max-width: 600px;

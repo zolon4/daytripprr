@@ -1,14 +1,13 @@
 /* universal */
 body {
-
+font-family: 'Open Sans', serif;
 }
 .list-group {
  margin-top: 2%;
 }
-
-
 .main-container {
  padding: 0;
+ width: 100%;
  margin-top: 70px;
  background-color: white;
  font-family: 'Open Sans', serif;
@@ -68,17 +67,46 @@ body {
  border-radius: 0%;
 }
 
-.login-heading,.settings-heading {
- font-size: 60px;
-}
 
 #login, #signup, #settings {
- margin-top: 30px;
+ margin-top: 50px;
  width: 80%;
  margin: 40px auto;
- font-family: 'Montserrat', serif;
+ font-family: 'Open Sans', serif;
 }
+#settings {
+ margin-top: 30px;
+ width: 80%;
+}
+.card {
+ margin: 0 auto;
+ width: 80%;
+ margin-top: 120px;
 
+}
+.btn {
+ text-transform: uppercase;
+}
+.settings-heading, .login-heading {
+ margin-top: 10px;
+ text-align: center;
+ text-transform: uppercase;
+ font-size: 1.5em;
+ color: #50E3C2;
+}
+#settings-hr {
+ color: #50E3C2;
+ width: 120px;
+ margin: 0 auto;
+ height: 3px;
+ border: none;
+ border-radius: 2px;
+}
+hr {
+ border: none;
+ height: 1px;/* old IE */
+ background-color: #50E3C2;
+}
 #logo,#logo2 {
  font-size: 15em;
  text-align: center;
@@ -90,6 +118,12 @@ body {
 }
 #theImg {
  width: 200px;
+}
+.login-card {
+ height: 70vh;
+}
+.login-card-block {
+ padding-top: 50px;
 }
 
 #completed-trips {
@@ -127,20 +161,21 @@ h4 {
  height: 100vh;
 }
 #about-content {
- background-color: #2a9b8b;
+ background-color: #eeeeee;
  height: 100%;
 }
 #about {
  text-align: center;
- font-size: 100px;
- font-family: 'Lato', serif;
+ font-size: 4em;
+ text-transform: uppercase;
+ font-family: 'Montserrat', serif;
 }
 .img-compass {
  width: 70%;
  margin: 90px auto;
 }
 .about-text {
- background-color: #3fd97f;
+ background-color: #50E3C2;
  height: 100vh;
 }
 #abt {
@@ -155,6 +190,12 @@ h4 {
  width: 20%;
  text-align: center;
 }
+
+.btn-info {
+ border-radius: 5px;
+ padding: 5px 40px 5px 40px;
+ margin-bottom: 2%;
+}
 /* sidebar */
 a:hover {
  color: #d3d3d3;
@@ -167,6 +208,9 @@ a:hover {
  width: 80%;
  margin: 0 auto;
  padding-top: 30px;
+}
+.fa-cog {
+ color: white;
 }
 #side-logo {
  text-align: center;
@@ -210,6 +254,12 @@ a:hover {
  margin: 0 auto;
  margin-top: 10px;
 
+}
+.settings-link {
+ margin-top: -30px;
+ font-size: .7em;
+ color: white;
+ text-transform: uppercase;
 }
 
 .btn-primary {
@@ -277,6 +327,20 @@ iframe {
 }
 
 
+#search {
+ margin-top: 20px;
+}
+.search {
+ margin-bottom: 5px;
+}
+.btn-search {
+ margin-top: 80px;
+}
+.save-trip {
+ text-align: center;
+ font-family: 'Open Sans', serif;
+ font-size: 1em;
+}
 
 @media screen and (max-width: 1000px) {
  #name {
@@ -287,5 +351,16 @@ iframe {
 @media screen and (max-width: 950px) {
  #name {
   font-size: 1.5em;
+ }
+ .btn-info {
+  border-radius: 5px;
+  padding: 5px 20px 5px 20px;
+  margin-bottom: 2%;
+ }
+ .card {
+  width: 100%;
+
+
+
  }
 }
