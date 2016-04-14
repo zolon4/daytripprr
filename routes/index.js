@@ -66,6 +66,19 @@ router.post('/distance', function(req, res){
   });
 });
 
+/*POST perform logged out searches */
+router.post('/distance1', function(req, res){
+ distance.get(
+  {
+    origin: req.body.origin,
+    destination: req.body.destination
+  },
+  function(err, data) {
+    if (err) return console.log(err);
+    res.json(data);
+  });
+});
+
 /*POST save searches. */
 router.post('/search', function(req, res, next){
   var userid = req.user.id;

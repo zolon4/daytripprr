@@ -32,14 +32,14 @@ var map = '<img id="theImg" src="http://images.clipartpanda.com/sun-transparent-
   $('#out_search').on('click', function(){
     $.ajax({
       method: "POST",
-      url: "/distance",
-      data: { origin: $('origin').val(), destination: $('#destination').val() }
+      url: "/distance1",
+      data: { origin: $('#origin').val(), destination: $('#destination').val() }
     }).done(function(response){
       var map = "id='youframe' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/directions?key=AIzaSyC-EwkbLF1DAAx4XVC7935uSXUEtiM68iM&origin=" + response.origin + "&destination=" + response.destination + "'";
 
       console.log(map);
 
-       $('#result').prepend('<div class="card"><div class="card-block"><div class="row"><div class="col-sm-4"><iframe ' + map + '></iframe></div><div class="col-sm-8"><a target="_blank" href="https://www.google.com/maps/dir/'+response.origin+'/'+response.destination+'/"><h4>' + response.destination + '</h4></a><p>' + response.duration + '</p>' + saveTrip +'</a></div></div></div></div>');
+       $('#result').prepend('<div class="card"><div class="card-block"><div class="row"><div class="col-sm-4"><iframe ' + map + '></iframe></div><div class="col-sm-8"><a target="_blank" href="https://www.google.com/maps/dir/'+response.origin+'/'+response.destination+'/"><h4>' + response.destination + '</h4></a><p>' + response.duration + '</p></a></div></div></div></div>');
        debugger;
       })
     });
