@@ -17,6 +17,10 @@
  </head>
  <body>
  <nav class="navbar navbar-light bg-faded navbar-fixed-top">
+  <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+   &#9776;
+ </button>
+ <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
    <ul class="nav navbar-nav">
     <a href="/" class="navbar-brand">daytripprr</a>
     <% if (currentUser) { %>
@@ -25,5 +29,6 @@
      <li class="nav-item pull-xs-right"><a class="nav-link" href="/profile">trips</a><li>
     <% } %>
    </div>
+  </div>
  </nav>
   <div class="container-fluid main-container">
