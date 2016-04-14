@@ -3,7 +3,7 @@
  <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href='https://fonts.googleapis.com/css?family=Lobster+Two:400,700|Amatic+SC:400,700|Montserrat|Lato|Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster+Two:400,700|Amatic+SC:400,700|Montserrat:700|Lato|Open+Sans' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <script src="/javascripts/jquery-2.2.3.min.js"></script>
   <script src="/javascripts/bootstrap.min.js"></script>
@@ -21,17 +21,15 @@
    &#9776;
  </button>
  <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
-   <ul class="nav navbar-nav">
-    <a href="/" class="navbar-brand">daytripprr</a>
-   </ul>
+  <a href="/" class="navbar-brand">daytripprr</a>
    <ul class="nav navbar-nav pull-xs-right">
     <% if (currentUser) { %>
-     <li class="nav-item"><a class="nav-link" href="/search">Find A trip </a><li>
-     <li class="nav-item"><a class="nav-link" href="/profile">trips</a><li>
-      <li class="nav-item logout"><a class="nav-link logout" href="/users/logout">logout</a><li>
+     <li class="nav-item"><a class="nav-link" href="/search">Find A trip </a></li>
+     <li class="nav-item"><a class="nav-link" href="/profile">trips</a></li>
+      <li class="nav-item logout"><a class="nav-link logout" href="/users/logout">logout</a></li>
     <% } %>
    </ul>
    </div>
   </div>
  </nav>
-  <div class="container-fluid main-container">
+  <div class="main-container">

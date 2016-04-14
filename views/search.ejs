@@ -1,16 +1,19 @@
 <% include ./partials/header %>
- <div id="search-page">
-   <h1 class="search-head">Where do you want to go?</h1>
-    <div id="search-form" class="form-group">
-     <div class="input-group search-input">
-     <input id="destination" name="destination" type="text" class="form-control" placeholder="EX: Joshua Tree">
-     <div id="search">
-      <input type="submit" id="search" class="btn btn-primary btn-block" value="GO">
+ <div class="row">
+  <div class="col-xs-12">
+   <div id="search-page">
+     <h1 class="search-head">Where do you want to go?</h1>
+      <div id="search-form" class="form-group">
+       <div class="input-group search-input">
+       <input id="destination" name="destination" type="text" class="form-control" placeholder="EX: Joshua Tree">
+       <div id="search">
+        <input type="submit" id="search" class="btn btn-primary btn-block" value="GO">
+       </div>
+      </div>
      </div>
     </div>
-   </div>
+     <div id="result">
+     </div>
   </div>
-   <div id="result">
-   </div>
 </div>
 <% include ./partials/footer %>
