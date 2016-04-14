@@ -386,8 +386,8 @@ iframe {
 
  }
  #logo2 {
-  font-size: 3em;
-  color: #50E3C2;
+  padding-top: 80px;
+  font-size: 4em;
  }
  #abt {
   margin-top: 100px;
@@ -397,6 +397,9 @@ iframe {
  }
  #about-content {
   height: 1000px;
+ }
+ .btn-blue, .btn-signup {
+  width: 80%;
  }
 }
 
