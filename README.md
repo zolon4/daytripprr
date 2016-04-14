@@ -31,12 +31,12 @@ We built this app using node.js, express, passport, and mongodb. We used the goo
 
 The heart of our app is the profile page, where users are able to save and complete trips. The code for this page is as follows:
 
-![image](/Users/allisonsudholt/Desktop/profile_code_1.png)
-![image](/Users/allisonsudholt/Desktop/profile_code_2.png)
+![image](/public/images/profile_code_1.png)
+![image](/public/images/profile_code_2.png)
 
 The main functionality lives in our script.js folder, where the majority of api calls and all ajax is found:
 
-![image](/Users/allisonsudholt/websites/daytripprr/public/images/scripts_show.png)
+![image](/public/images/scripts_show.png)
 
 
 ## Installation
