@@ -161,7 +161,7 @@ h4 {
 /* about */
 
 #about-logo {
- background-color: #03232E;
+ background-color: #50E3C2;
  height: 100vh;
 }
 #about-content {
@@ -179,13 +179,22 @@ h4 {
  margin: 90px auto;
 }
 .about-text {
- background-color: #50E3C2;
- height: 100vh;
+ margin-top: 40px;
 }
 #abt {
  margin-left: 10px;
  font-family: 'Open Sans', serif;
  color: white;
+}
+
+.btn-blue {
+ background-color: #ADD8E6;
+ border-color: #ADD8E6;
+ width: 20%;
+}
+.btn-blue:hover {
+ background-color: #48ccae;
+ border-color: #48ccae;
 }
 .btn-search {
  margin-bottom: 5px;
@@ -193,6 +202,10 @@ h4 {
 .btn-signup {
  width: 20%;
  text-align: center;
+}
+.btn-signup:hover {
+ background-color: #ADD8E6;
+ border-color: #ADD8E6;
 }
 
 .btn-info {
@@ -374,6 +387,10 @@ iframe {
  }
  #logo2 {
   font-size: 3em;
+  color: #50E3C2;
+ }
+ #abt {
+  margin-top: 100px;
  }
  .btn-signup {
   width: 120px;
