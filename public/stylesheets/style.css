@@ -200,8 +200,9 @@ iframe {
 .search-input {
  width: 100%;
 }
-.btn-block {
- margin-top: 3%;
+
+#search {
+ margin-top: 4%;
 }
 
 
