@@ -13,53 +13,52 @@
  </div>
 </div>
 </div>
- <div class="row">
- <div class="col-sm-12">
- <section id="trips">
-  <ul class="list-group">
+  <section id="trips">
+   <div class="row">
     <% trips.reverse().forEach(function(trip){ %>
      <%if(trip.completed == null) {%>
       <div class="col-sm-4">
-      <li class="list-group-item">
-         <iframe id='youframe' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/directions?key=AIzaSyC-EwkbLF1DAAx4XVC7935uSXUEtiM68iM&origin=<%=trip.origin %>&destination=<%= trip.destination%>'></iframe>
-         <a target="_blank" href="https://www.google.com/maps/dir/<%= trip.origin %>/<%= trip.destination %>"><h1><%= trip.destination %></h1></a>
+       <div class="card map-card">
+        <iframe id='youframe' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/directions?key=AIzaSyC-EwkbLF1DAAx4XVC7935uSXUEtiM68iM&origin=<%=trip.origin %>&destination=<%= trip.destination%>'></iframe>
+        <div class="card-block">
+         <a target="_blank" href="https://www.google.com/maps/dir/<%= trip.origin %>/<%= trip.destination %>"><h3><%= trip.destination %></h3></a>
          <p>Estimated Drive Time: <%= trip.duration %></p>
          <p>Starting Point: <%= trip.origin %></p>
          <form action="/<%= trip.id %>/complete" method="post">
           <button id="complete-button" type="submit" value="" class="fa fa-check fa-2x pull-xs-right"></button>
          </form>
          <form action="/<%= trip.id %>/delete/" method="post">
-          <button id="delete" type="submit" value="" class="fa fa-trash-o fa-2x"></button>
+          <button id="delete" type="submit" value="" class="fa fa-trash-o pull-xs-left fa-2x"></button>
          </form>
-      </li>
+        </div>
+       </div>
      </div>
     <% }}) %>
-   </ul>
   </div>
  </section>
 </div>
-<div class="row">
 <section id="completed-trips">
-<div class="col-sm-12 col-lg-12">
  <div id="completed-trips-content">
  <ul class="list-group">
   <h2 class="saved-heading">Trips I've been on</h2>
+  <div class="row">
    <% trips.reverse().forEach(function(trip){ %>
     <%if(trip.completed == true) {%>
      <div class="col-sm-4">
-     <li class="list-group-item">
-        <iframe id='youframe' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/directions?key=AIzaSyC-EwkbLF1DAAx4XVC7935uSXUEtiM68iM&origin=<%=trip.origin %>&destination=<%= trip.destination%>'></iframe>
-        <a target="_blank" href="https://www.google.com/maps/dir/<%= trip.origin %>/<%= trip.destination %>"><h1><%= trip.destination %></h1></a>
+      <div class="card">
+       <iframe id='youframe' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/directions?key=AIzaSyC-EwkbLF1DAAx4XVC7935uSXUEtiM68iM&origin=<%=trip.origin %>&destination=<%= trip.destination%>'></iframe>
+       <div class="card-block">
+        <a target="_blank" href="https://www.google.com/maps/dir/<%= trip.origin %>/<%= trip.destination %>"><h3><%= trip.destination %></h3></a>
         <p>Estimated Drive Time: <%= trip.duration %></p>
         <p>Starting Point: <%= trip.origin %></p>
-     
         <form action="/<%= trip.id %>/delete/" method="post">
          <button id="delete" type="submit" value="" class="fa fa-trash-o fa-2x"></button>
         </form>
-     </li>
     </div>
+   </div>
+   </div>
+
    <% }}) %>
-  </ul>
  </div>
  </div>
 </section>
