@@ -19,9 +19,9 @@
     <% trips.reverse().forEach(function(trip){ %>
      <%if(trip.completed == null) {%>
       <div class="col-sm-4">
-      <li class="list-group-item">
+      <li id="hover" class="list-group-item">
          <iframe id='youframe' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/directions?key=AIzaSyC-EwkbLF1DAAx4XVC7935uSXUEtiM68iM&origin=<%=trip.origin %>&destination=<%= trip.destination%>'></iframe>
-         <a target="_blank" href="https://www.google.com/maps/dir/<%= trip.origin %>/<%= trip.destination %>"><h1><%= trip.destination %></h1></a>
+         <a target="_blank" href="https://www.google.com/maps/dir/<%= trip.origin %>/<%= trip.destination %>"><h1 id="destination"><%= trip.destination %></h1></a>
          <p>Estimated Drive Time: <%= trip.duration %></p>
          <p>Starting Point: <%= trip.origin %></p>
          <form action="/<%= trip.id %>/complete" method="post">

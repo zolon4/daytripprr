@@ -31,14 +31,19 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET profile page */
-
 router.get('/profile', authenticatedUser, function(req,res,next){
   var trips = Trip.find({userId: req.user._id}, '', function(err,trip){
    if(err) console.log(err)
-   console.log(trip.reverse())
    res.render('profile', {user: req.user, trips: trip.reverse()});
  })
 })
+
+router.post('/profile', function(req, res, next){
+  console.log(data);
+})
+
+
+
 
 /* GET search page. */
 router.get('/search', function(req, res, next){
