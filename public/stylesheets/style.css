@@ -1,24 +1,39 @@
 /* universal */
 body {
- background-color: #4aedd7;
+
 }
 .list-group {
  margin-top: 2%;
 }
-.list-group-item {
- margin-top: 1%;
-}
 
-.container-fluid {
+
+.main-container {
  padding: 0;
  margin-top: 70px;
+ background-color: white;
+ font-family: 'Open Sans', serif;
 }
-
+.container-fluid {
+ padding: 0;
+}
+.saved-heading {
+ text-align: center;
+ padding: 20px;
+ color: #9B9B9B;
+}
+.nav-item {
+ text-transform: uppercase;
+ font-family: 'Montserrat',serif;
+}
+.navbar-brand {
+ font-family: 'Amatic SC', cursive;
+ color: white;
+}
 .logotype {
  font-family: 'Amatic SC',cursive;
 }
 .prof-info {
- font-family: 'Lato', serif;
+ font-family: 'Open Sans', serif;
  font-size: 1.5em;
  text-align: right;
 }
@@ -26,8 +41,9 @@ body {
  border-radius: 50%;
  width: 100%;
 }
+
 #info {
- text-align: right;
+ text-align: center;
 
 }
 #name,#city {
@@ -75,6 +91,10 @@ body {
 #theImg {
  width: 200px;
 }
+
+#completed-trips {
+ width: 100%;
+}
 h4 {
  font-size: 2.3em;
  font-family: 'Montserrat', serif;
@@ -91,6 +111,15 @@ h4 {
 .text-right {
  text-align: right;
 }
+#completed-trips {
+ background-color: #eeeeee !important;
+ height: 100%;
+ width: 100%;
+}
+#completed-trips-content {
+ width: 80%;
+}
+
 /* about */
 
 #about-logo {
@@ -137,6 +166,7 @@ a:hover {
 #search-page {
  width: 80%;
  margin: 0 auto;
+ padding-top: 30px;
 }
 #side-logo {
  text-align: center;
@@ -147,39 +177,20 @@ a:hover {
  text-align: right;
 }
 
-.sidebar {
- position: fixed;
- width: 190px;
- background-color: #1A0323;
- color: white;
- height: 100vh;
- font-family: 'Montserrat', serif;
- font-size: 20px;
- margin: 0 auto;
-}
 
-.nav-sidebar {
- list-style-type: none;
- text-align: center;
- margin-top: 60px;
-}
-.sidebar-nav {
- margin-top: 20px;
-
-}
 #login {
  width: 85%;
  margin: 100px auto;
 }
 
 .user-profile {
- background-color: #2a8b8b;
+ background-color: #50E3C2;
  color: white;
- height: 20vh;
+ height: 80%;
  font-family: 'Lato', serif;
  font-size: 20px;
  margin: 0 auto;
- margin-top: -20px;
+ padding-top: 10px;
  text-align: center;
 }
 
@@ -187,16 +198,28 @@ a:hover {
  background-color: transparent;
  border: none;
 }
-.content-prof {
- margin-left: 10%;
+
+#completed-trips-content,#trips {
  width: 80%;
+ margin-left: 10%;
 }
+
 
 .user-profile-img {
- width: 80%;
+ width: 12%;
+ margin: 0 auto;
+ margin-top: 10px;
+
 }
 
-
+.btn-primary {
+ background-color: #48ccae;
+ border-color: #48ccae;
+}
+.btn-primary:hover {
+ background: #96EEDA;
+ border-color: #96EEDA
+}
 .custom-card {
  height: 100vh;
  text-align: left;
@@ -207,15 +230,51 @@ iframe {
  width: 100%;
 }
 
-
 .search-input {
  width: 100%;
+}
+.fa-cog {
+ margin-top: 6px;
 }
 
 #search {
  margin-top: 5%;
 }
 
+#search-page {
+ background-color: #50E3C2;
+ width: 100%;
+ padding-bottom: 40px;
+}
+#search-form {
+ width: 80%;
+ margin: 0 auto;
+}
+.search-head {
+ text-align: center;
+ text-transform: uppercase;
+ color: white;
+}
+
+
+.navbar-brand {
+ font-size: 2.5em;
+ color: white !important;
+}
+.nav-item {
+ padding-top: 20px;
+ margin-right: 2%;
+}
+.nav-link {
+ color: white !important;
+}
+
+.bg-faded {
+ background-color: #50E3C2;
+}
+.navbar {
+ border-bottom: none;
+}
 
 
 
@@ -223,9 +282,7 @@ iframe {
  #name {
   font-size: 1.8em;
  }
- .user-profile {
-  height: 20vh;
- }
+
 }
 @media screen and (max-width: 950px) {
  #name {

@@ -2,7 +2,7 @@
 <html>
  <head>
   <meta charset="utf-8">
-  <link href='https://fonts.googleapis.com/css?family=Lobster+Two:400,700|Amatic+SC:400,700|Montserrat|Lato' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster+Two:400,700|Amatic+SC:400,700|Montserrat|Lato|Open+Sans' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <script src="/javascripts/jquery-2.2.3.min.js"></script>
   <script src="/javascripts/bootstrap.min.js"></script>
@@ -15,27 +15,15 @@
   <title>daytripprr</title>
  </head>
  <body>
-  <div class="collapse" id="exCollapsingNavbar">
-   <div class="bg-inverse p-a-1">
-    <ul class="nav nav-sidebar">
-     <a href="/search">
-      <i class="fa fa-search fa-3x"></i>
-     </a>
-     <a href="/profile">
-       <i class="fa fa-user fa-3x"></i>
-     </a>
-     <% if (currentUser) { %>
-      <a href="/users/settings"><i class="fa fa-cog fa-3x"></i></a>
-     <a href="/users/logout">
-      <i class="fa fa-sign-out fa-3x"></i>
-     </a>
-
+ <nav class="navbar navbar-light bg-faded navbar-fixed-top">
+   <ul class="nav navbar-nav">
+    <a href="/" class="navbar-brand">daytripprr</a>
+    <% if (currentUser) { %>
+     <li class="nav-item pull-xs-right"><a class="nav-link" href="/users/logout">logout</a><li>
+     <li class="nav-item pull-xs-right"><a class="nav-link" href="/search">Find A trip </a><li>
+     <li class="nav-item pull-xs-right"><a class="nav-link" href="/profile">Saved</a><li>
+     <li class="nav-item pull-xs-right"><a class="nav-link fa fa-lg fa-cog" href="/users/settings"></a></li>
     <% } %>
-  </div>
- </div>
- <nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
-   &#9776;
-  </button>
+   </div>
  </nav>
-  <div class="container-fluid">
+  <div class="container-fluid main-container">
