@@ -10,9 +10,11 @@
   </p>
  </div>
   <center>
+   <% if(!currentUser) { %>
    <a class="btn btn-signup btn-primary" href="/users/login">Log in!</a>
   <a class="btn btn-blue btn-success" href="/users/signup">Sign Up!</a>
  </center>
+ <% } %>
  </center>
 </div>
 
