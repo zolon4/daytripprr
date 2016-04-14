@@ -1,16 +1,24 @@
 <% include ./partials/header %>
  <div class="row">
-  <div class="col-sm-2 user-profile">
+  <div class="col-sm-12 user-profile">
+   <div class="row">
+    <div class="col-sm-2">
    <img class="img-fluid user-profile-img img-circle" src="http://www.aperfectworld.org/clipart/seasons/sun.png">
+  </div>
     <div id="info">
-     <h4 id="name"><%= user.local.username %></h4>
-     <p><%= user.local.currentcity %>, <%= user.local.currentstate %></p>
-     <a href="/users/settings"><i class="fa fa-cog fa-3x"></i></a>
+     <div class="col-sm-10">
+      <h4 id="name"><%= user.local.username %></h4>
+      <p id="city"><%= user.local.currentcity %>, <%= user.local.currentstate %></p>
+     </div>
+
     </div>
  </div>
- <div class="col-sm-10 content-prof">
+</div>
+ <div class="row">
+ <div class="col-sm-12 content-prof">
   <ul class="list-group">
    <h2>Trips I want to take</h2>
+   <a href="/search">Add a trip</a>
     <% trips.reverse().forEach(function(trip){ %>
      <%if(trip.completed == null) {%>
       <li class="list-group-item">

@@ -8,11 +8,14 @@ body {
 .list-group-item {
  margin-top: 1%;
 }
-.content {
- margin-left: 190px;
-}
+
 .container-fluid {
  padding: 0;
+ margin-top: 70px;
+}
+
+.logotype {
+ font-family: 'Amatic SC',cursive;
 }
 .prof-info {
  font-family: 'Lato', serif;
@@ -23,6 +26,14 @@ body {
  border-radius: 50%;
  width: 100%;
 }
+#info {
+ text-align: right;
+
+}
+#name,#city {
+ margin-right: 10px;
+}
+
 /* landing */
 
 #landing {
@@ -112,8 +123,8 @@ h4 {
  margin-bottom: 5px;
 }
 .btn-signup {
-width: 20%;
-text-align: center;
+ width: 20%;
+ text-align: center;
 }
 /* sidebar */
 a:hover {
@@ -121,9 +132,12 @@ a:hover {
  text-decoration: none;
 }
 .mountain {
- width: 100%;
+ width: 60px;
 }
-
+#search-page {
+ width: 80%;
+ margin: 0 auto;
+}
 #side-logo {
  text-align: center;
  font-family: 'Amatic SC', cursive;
@@ -148,7 +162,6 @@ a:hover {
  list-style-type: none;
  text-align: center;
  margin-top: 60px;
-
 }
 .sidebar-nav {
  margin-top: 20px;
@@ -162,12 +175,12 @@ a:hover {
 .user-profile {
  background-color: #2a8b8b;
  color: white;
- height: 100vh;
+ height: 20vh;
  font-family: 'Lato', serif;
  font-size: 20px;
  margin: 0 auto;
+ margin-top: -20px;
  text-align: center;
- position: fixed;
 }
 
 #complete-button,#delete {
@@ -175,16 +188,14 @@ a:hover {
  border: none;
 }
 .content-prof {
- margin-left: 20%;
+ margin-left: 10%;
  width: 80%;
 }
 
 .user-profile-img {
- margin-top: 50px;
+ width: 80%;
 }
-#info {
- margin-top: 60px;
-}
+
 
 .custom-card {
  height: 100vh;
@@ -200,8 +211,9 @@ iframe {
 .search-input {
  width: 100%;
 }
-.btn-block {
- margin-top: 3%;
+
+#search {
+ margin-top: 5%;
 }
 
 
@@ -210,6 +222,9 @@ iframe {
 @media screen and (max-width: 1000px) {
  #name {
   font-size: 1.8em;
+ }
+ .user-profile {
+  height: 20vh;
  }
 }
 @media screen and (max-width: 950px) {
