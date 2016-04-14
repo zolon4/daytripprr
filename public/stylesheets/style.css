@@ -6,16 +6,11 @@ font-family: 'Open Sans', serif;
  margin-top: 2%;
 }
 .main-container {
- padding: 0;
- width: 100%;
  margin-top: 70px;
  background-color: white;
  font-family: 'Open Sans', serif;
 }
-.container-fluid {
- padding: 0;
-width: 100hw;
-}
+
 #alternative-body {
  width: 100%;
 }
@@ -71,12 +66,18 @@ width: 100hw;
  border-radius: 0%;
 }
 
-
+.card-block {
+ text-align: center;
+ padding-bottom: 40px;
+}
 #login, #signup, #settings {
  margin-top: 50px;
  width: 80%;
  margin: 40px auto;
  font-family: 'Open Sans', serif;
+}
+#signup {
+ padding-top: 30px;
 }
 #settings {
  margin-top: 30px;
@@ -84,13 +85,15 @@ width: 100hw;
 }
 .card {
  margin: 0 auto;
- width: 80%;
- margin-top: 120px;
-
+ width: 90%;
+}
+.map-card {
+ margin-top: 30px;
 }
 .btn {
  text-transform: uppercase;
 }
+
 .settings-heading, .login-heading {
  margin-top: 10px;
  text-align: center;
@@ -156,6 +159,7 @@ h4 {
 }
 #completed-trips-content {
  width: 80%;
+ margin-top: 30px;
 }
 
 /* about */
@@ -322,16 +326,15 @@ iframe {
  text-transform: uppercase;
  color: white;
 }
-
+.card {
+ margin-top: 2%;
+}
 
 .navbar-brand {
  font-size: 2.5em;
  color: white !important;
 }
-.nav-item {
- padding-top: 20px;
- margin-right: 2%;
-}
+
 .nav-link {
  color: white !important;
 }
@@ -341,6 +344,9 @@ iframe {
 }
 .navbar {
  border-bottom: none;
+}
+.nav {
+ display: inline-block;
 }
 
 
@@ -379,7 +385,6 @@ iframe {
  }
  .card {
   width: 100%;
-
  }
  .main-container {
   margin-top: 50px;
