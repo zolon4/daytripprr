@@ -60,5 +60,11 @@ var map = '<img id="theImg" src="http://images.clipartpanda.com/sun-transparent-
     })
   delayImage(map);
 
-
+  var $body = $(document);
+     $body.bind('scroll', function() {
+         // "Disable" the horizontal scroll.
+         if ($body.scrollLeft() !== 0) {
+             $body.scrollLeft(0);
+         }
+     });
 })
