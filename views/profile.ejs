@@ -7,6 +7,7 @@
       <img class="img-fluid user-profile-img img-circle" src="http://www.aperfectworld.org/clipart/seasons/sun.png">
       <h4 id="name">@<%= user.local.username %></h4>
       <p id="city"><%= user.local.currentcity %>, <%= user.local.currentstate %></p>
+      <a class="btn btn-info btn" href="/users/settings">SETTINGS</a>
      </div>
   </div>
  </div>
@@ -25,7 +26,7 @@
          <p>Estimated Drive Time: <%= trip.duration %></p>
          <p>Starting Point: <%= trip.origin %></p>
          <form action="/<%= trip.id %>/complete" method="post">
-          <button id="complete-button" type="submit" value="" class="fa fa-check fa-2x"></button>
+          <button id="complete-button" type="submit" value="" class="fa fa-check fa-2x pull-xs-right"></button>
          </form>
          <form action="/<%= trip.id %>/delete/" method="post">
           <button id="delete" type="submit" value="" class="fa fa-trash-o fa-2x"></button>
@@ -51,9 +52,7 @@
         <a target="_blank" href="https://www.google.com/maps/dir/<%= trip.origin %>/<%= trip.destination %>"><h1><%= trip.destination %></h1></a>
         <p>Estimated Drive Time: <%= trip.duration %></p>
         <p>Starting Point: <%= trip.origin %></p>
-        <form action="/<%= trip.id %>/complete" method="post">
-         <button id="complete-button" type="submit" value="" class="fa fa-check fa-2x"></button>
-        </form>
+     
         <form action="/<%= trip.id %>/delete/" method="post">
          <button id="delete" type="submit" value="" class="fa fa-trash-o fa-2x"></button>
         </form>

@@ -1,5 +1,4 @@
 $(function(){
-
 var map = '<img id="theImg" src="http://images.clipartpanda.com/sun-transparent-background-sun_strong_bold_T.png" />'
 
 //Logged in search function
