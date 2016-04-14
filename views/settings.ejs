@@ -1,6 +1,6 @@
 <% include ./partials/header %>
- <div id="settings">
-  <div id="settings-green">
+ <div class="row">
+  <div class="col-sm-6.offset-sm-3">
   <div class="card">
    <h3 class="settings-heading">Edit Profile</h3>
    <hr id="settings-hr"/>
@@ -23,10 +23,10 @@
      <label>State</label>
      <input type="text" class="form-control" name="currentstate" value="<%= user.local.currentstate %>">
    </div>
-   <button type="submit" class="btn  btn-primary btn-block">SAVE</button>
+   <button type="submit" class="btn  btn-primary btn-lg btn-block">SAVE</button>
   </form>
   </div>
  </div>
 </div>
-</div
+</div>
 <% include ./partials/footer %>

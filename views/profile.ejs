@@ -21,9 +21,8 @@
        <div class="card map-card">
         <iframe id='youframe' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/directions?key=AIzaSyC-EwkbLF1DAAx4XVC7935uSXUEtiM68iM&origin=<%=trip.origin %>&destination=<%= trip.destination%>'></iframe>
         <div class="card-block">
-         <a target="_blank" href="https://www.google.com/maps/dir/<%= trip.origin %>/<%= trip.destination %>"><h3><%= trip.destination %></h3></a>
-         <p>Estimated Drive Time: <%= trip.duration %></p>
-         <p>Starting Point: <%= trip.origin %></p>
+         <a target="_blank" href="https://www.google.com/maps/dir/<%= trip.origin %>/<%= trip.destination %>"><h6><%= trip.destination %></h6></a>
+         <p><%= trip.duration %> from  <%= trip.origin %></p>
          <form action="/<%= trip.id %>/complete" method="post">
           <button id="complete-button" type="submit" value="" class="fa fa-check fa-2x pull-xs-right"></button>
          </form>
@@ -48,9 +47,8 @@
       <div class="card">
        <iframe id='youframe' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/directions?key=AIzaSyC-EwkbLF1DAAx4XVC7935uSXUEtiM68iM&origin=<%=trip.origin %>&destination=<%= trip.destination%>'></iframe>
        <div class="card-block">
-        <a target="_blank" href="https://www.google.com/maps/dir/<%= trip.origin %>/<%= trip.destination %>"><h3><%= trip.destination %></h3></a>
-        <p>Estimated Drive Time: <%= trip.duration %></p>
-        <p>Starting Point: <%= trip.origin %></p>
+        <a target="_blank" href="https://www.google.com/maps/dir/<%= trip.origin %>/<%= trip.destination %>"><h6><%= trip.destination %></h6></a>
+        <p><%= trip.duration %> from  <%= trip.origin %></p>
         <form action="/<%= trip.id %>/delete/" method="post">
          <button id="delete" type="submit" value="" class="fa fa-trash-o fa-2x"></button>
         </form>
