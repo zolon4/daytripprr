@@ -14,6 +14,10 @@ font-family: 'Open Sans', serif;
 }
 .container-fluid {
  padding: 0;
+width: 100hw;
+}
+#alternative-body {
+ width: 100%;
 }
 .saved-heading {
  text-align: center;
