@@ -401,6 +401,16 @@ iframe {
  .btn-blue, .btn-signup {
   width: 80%;
  }
+
+}
+
+@media screen and (max-width:800px) {
+ .nav-item,.nav-link {
+  font-style: .1em
+ }
+ .logout {
+  text-align: center;
+ }
 }
 
 @media screen and (max-width: 320px) {
