@@ -7,6 +7,21 @@ Welcome to Daytripprr! We built this app to help folks plan and save daytrips th
 
 As we grow, we plan to include additional information about your destination, including recommended activities and hotel information. We also want you to be able to follow your friends trips, because daytrips are more fun with friends :)
 
+## Motivation
+
+We wanted to build something easy to use to store all of our daytrip ideas in one place. Time is often a limiting factor, and rather than try to remember a passing thought weeks later when free time appears, we thought it would be better to have all of these ideas stored in one place. 
+
+As we grow, we plan to add additional features for pre- and post-trip planning. Feel free to fork and add features if you've got a cool idea to improve. We want to help the world plan trips as easily and concisely as possible!
+
+## User Story
+
+* As a user, I want to login to my account and do a search without entering in my origin, because I haven't moved
+* As a user, I want to update my physical location, email address, or user name as the wind blows.
+* As a user, I want to save daytrips that I've searched, because they look like a lot of fun
+* As a user, I want to be able to delete those trips once they start to look less fun
+* As a user, I want to be able to cross trips that I've taken off my list, and save them elsewhere for posterity 
+* As a user, I want to be able to see what this app does, even if I'm not logged in
+
 ## Tech Specs
 
 We built this app using node.js, express, passport, and mongodb. We used the google distance matrix api, as well as the google maps embed api. Please see the following package.json for dependencies:
@@ -24,15 +39,11 @@ The main functionality lives in our script.js folder, where the majority of api 
 ![image](/Users/allisonsudholt/websites/daytripprr/public/images/scripts_show.png)
 
 
-## Motivation
-
-We wanted to build something easy to use to store all of our daytrip ideas in one place. Time is often a limiting factor, and rather than try to remember a passing thought weeks later when free time appears, we thought it would be better to have all of these ideas stored in one place. 
-
-As we grow, we plan to add additional features for pre- and post-trip planning. Feel free to fork and add features if you've got a cool idea to improve. We want to help the world plan trips as easily and concisely as possible!
-
 ## Installation
 
 Visit [daytripprr](https://daytripprr.herokuapp.com/) to use the app as it exists today! If you want to tinker with it yourself, feel free to fork and code! If you build something cool that you think should be integrated, submit a pull request and we'll take a look at what you've made. We love open source!
+
+Make sure to run npm install before making any changes!
 
 
 ## Contributors
