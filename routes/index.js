@@ -28,8 +28,9 @@ function unAuthenticatedUser(req, res, next) {
 
 router.get('/', function(req, res, next) {
   res.render('about', { title: 'Express'});
-
 });
+
+/* GET profile page */
 
 router.get('/profile', authenticatedUser, function(req,res,next){
   var trips = Trip.find({userId: req.user._id}, '', function(err,trip){
@@ -39,15 +40,33 @@ router.get('/profile', authenticatedUser, function(req,res,next){
  })
 })
 
-
-
-
-/*GET trip search page. */
-router.get('/search', authenticatedUser, function(req, res, next){
-  var id = req.user.id;
-  res.render('search',{id: id});
+/* GET search page. */
+router.get('/search', function(req, res, next){
+  if (req.isAuthenticated()){
+    var id = req.user.id;
+    return (res.render('search',{id: id}));
+ } else
+    res.render('search_loggedout');
 });
 
+/* POST perform logged in searches */
+router.post('/distance', function(req, res){
+  var currentcity = req.user.local.currentcity;
+  var currentstate = req.user.local.currentstate;
+  var origin = currentcity + ", " + currentstate;
+
+  distance.get(
+  {
+    origin: origin,
+    destination: req.body.destination
+  },
+  function(err, data) {
+    if (err) return console.log(err);
+    res.json(data);
+  });
+});
+
+/*POST save searches. */
 router.post('/search', function(req, res, next){
   var userid = req.user.id;
       var trip = Trip({
@@ -78,27 +97,6 @@ router.post('/:id/delete/', function(req, res, next) {
     res.redirect('/profile')
   });
 });
-
-router.post('/distance', function(req, res){
-  var currentcity = req.user.local.currentcity;
-  var currentstate = req.user.local.currentstate;
-  var origin = currentcity + ", " + currentstate;
-
-  distance.get(
-  {
-    origin: origin,
-    destination: req.body.destination
-  },
-  function(err, data) {
-    if (err) return console.log(err);
-    res.json(data);
-  });
-});
-
-router.get('/test', function(req, res, next){
-  res.render('test');
-})
-
 
 /*GET trip show page. */
 router.get('/:id', authenticatedUser, function(req, res, next){
