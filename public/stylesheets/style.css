@@ -16,9 +16,7 @@ h1,h2,h3,h5,h6 {
  font-family: 'Open Sans', serif;
 }
 
-#alternative-body {
- width: 100%;
-}
+
 .saved-heading {
  text-align: center;
  padding: 20px;
@@ -232,7 +230,6 @@ a:hover {
  width: 60px;
 }
 #search-page {
- width: 100%;
  padding-top: 30px;
 }
 .fa-cog {
@@ -274,7 +271,9 @@ a:hover {
  margin-left: 10%;
 }
 
-
+#trips {
+ padding: 2em 0;
+}
 .user-profile-img {
  width: 12%;
  margin: 0 auto;
