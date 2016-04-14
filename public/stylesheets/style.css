@@ -1,6 +1,7 @@
 /* universal */
 body {
 font-family: 'Open Sans', serif;
+overflow-x: hidden;
 }
 
 .container-fluid {
@@ -63,9 +64,7 @@ h1,h2,h3,h5,h6 {
  background-size: cover;
  height: 100vh;
 }
-.btn {
- margin-top: 1%;
-}
+
 
 .form-control-custom {
  border-top: none;
@@ -316,10 +315,10 @@ iframe {
 
 #search-form {
  text-align: center;
- width: 100%;
 }
 #search-page {
  background-color: #50E3C2;
+
 }
 
 .search-head {
