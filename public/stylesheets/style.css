@@ -374,5 +374,7 @@ iframe {
  .btn-signup {
   width: 120px;
  }
- 
+ #about-content {
+  height: 800px;
+ }
 }
