@@ -1,19 +1,24 @@
 <% include ./partials/header %>
+<div class="container-fluid">
  <div class="row">
   <div class="col-xs-12">
    <div id="search-page">
+    <section id="search-content">
      <h1 class="search-head">Where do you want to go?</h1>
-      <div id="search-form" class="form-group">
+      <div id="search-form" class="form-group form-inline">
        <div class="input-group search-input">
-       <input id="destination" name="destination" type="text" class="form-control" placeholder="EX: Joshua Tree">
-       <div id="search">
-        <input type="submit" id="search" class="btn btn-primary btn-block" value="GO">
+       <input id="destination" name="destination" type="text" size="100" class="form-control" placeholder="Example: Joshua Tree">
+       <span class="input-group-btn">
+       <div class="input-group-lg"id="search">
+        <input type="submit" id="search" class="btn btn-primary" value="GO">
        </div>
-      </div>
+      </span>
      </div>
     </div>
+    </section>
+   </div>
      <div id="result">
      </div>
-  </div>
+</div>
 </div>
 <% include ./partials/footer %>
