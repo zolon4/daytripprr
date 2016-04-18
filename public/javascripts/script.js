@@ -21,6 +21,23 @@ var map = '<img id="theImg" src="http://images.clipartpanda.com/sun-transparent-
     });
   });
 
+
+
+$('#hover').mouseover(function(){
+  $.ajax({
+    method:'GET',
+    url: '/profile',
+    data: 'results'
+    })
+    .done(function(response){
+    var places = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants+in+' + $('#destination') + '&key=AIzaSyAstCe7qmfvpj83WkZ8FVtfy70DafOpXPQ';
+    console.log(data);
+  debugger;
+})
+})
+
+
+
 //Logged out search function
   $('#out_search').on('click', function(){
     $.ajax({
