@@ -38,12 +38,9 @@ router.get('/profile', authenticatedUser, function(req,res,next){
  })
 })
 
-router.post('/profile', function(req, res, next){
-  console.log(data);
-})
-
-
-
+// router.post('/profile', function(req, res, next){
+//   console.log(data);
+// })
 
 /* GET search page. */
 router.get('/search', function(req, res, next){

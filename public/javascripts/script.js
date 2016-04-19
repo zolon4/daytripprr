@@ -25,16 +25,22 @@ var map = '<img id="theImg" src="http://images.clipartpanda.com/sun-transparent-
 
 
 $('#hover').mouseover(function(){
+
+
   $.ajax({
     method:'GET',
-    url: '/profile',
-    data: 'results'
+    jsonp: "callback",
+    dataType: "jsonp",
+    url: 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants+in+' + $('#destination').text() + '&key=AIzaSyAstCe7qmfvpj83WkZ8FVtfy70DafOpXPQ',
     })
     .done(function(response){
-    var places = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants+in+' + $('#destination') + '&key=AIzaSyAstCe7qmfvpj83WkZ8FVtfy70DafOpXPQ';
-    console.log(data);
+      console.log("response");
+    })
+    .always(function(){
+      console.log("Always run");
+      debugger;
+    })
   debugger;
-})
 })
 
 

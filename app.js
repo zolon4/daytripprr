@@ -27,9 +27,6 @@ var srcPath = __dirname + '/sass';
 var destPath = __dirname + '/public/styles';
 // OR
 
-
-
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
