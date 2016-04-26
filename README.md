@@ -27,6 +27,11 @@ As we grow, we plan to add additional features for pre- and post-trip planning. 
 We built this app using node.js, express, passport, and mongodb. We used the google distance matrix api, as well as the google maps embed api. Please see the following package.json for dependencies:
 
 ![image](/public/images/daytripprr_dependencies.png)
+
+# ScreenShots
+![image](/public/images/trips.png)
+
+
 ## Code Example
 
 The heart of our app is the profile page, where users are able to save and complete trips. The code for this page is as follows:
