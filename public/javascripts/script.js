@@ -2,7 +2,8 @@ $(function(){
 var map = '<img id="theImg" src="http://images.clipartpanda.com/sun-transparent-background-sun_strong_bold_T.png" />'
 
 //Logged in search function
-  $('#search').on('click', function(){
+  $('#destination').keypress(function(e){
+   if(e.which == 13) {
     $.ajax({
       method: "POST",
       url: "/distance",
@@ -12,7 +13,7 @@ var map = '<img id="theImg" src="http://images.clipartpanda.com/sun-transparent-
 
       var saveTrip = '<form id="ABC" action="/search" method="post"><div class="form-group"><input type="hidden" name="destination" value="'+ response.destination +'"><input type="hidden" name="distance" value="'+response.distance+'"><input type="hidden"  name="duration" value="'+response.duration+'"><input type="hidden" class="form-control form-control-custom" name="origin" value="'+response.origin+'"><input type="hidden" class="form-control form-control-custom" name="map" value="'+ map +'"></div><button id="saveTrip" type="submit" class="btn btn-warning btn-block">Save</button></form> '
 
-      $('#result').prepend('<div class="col-sm-4"><div class="card"><iframe ' + map + '></iframe><div class="card-block"><div class="row"><a target="_blank" href="https://www.google.com/maps/dir/'+response.origin+'/'+response.destination+'/"><h4>' + response.destination + '</h4></a><p>' + response.duration + '</p>' + saveTrip +'</a></div></div></div>');
+      $('#result').prepend('<div class="col-sm-4"><div class="card"><iframe ' + map + '></iframe><div class="card-block"><div class="row"><a target="_blank" href="https://www.google.com/maps/dir/'+response.origin+'/'+response.destination+'/"><h4>' + response.destination + '</h4></a><p>' + response.duration + '</p>' + saveTrip +'</a></div></div><</div>');
 
       $('#saveTrip').on('click', function(){
        {
@@ -20,6 +21,8 @@ var map = '<img id="theImg" src="http://images.clipartpanda.com/sun-transparent-
         }
       })
     });
+   }
+
   });
 
 //Logged out search function
