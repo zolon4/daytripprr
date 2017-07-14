@@ -60,7 +60,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 require('./config/passport')(passport);
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://zolon:ubercart@ds019960.mlab.com:19960/daytripprr');
+mongoose.connect(process.env.DB_CONN_DAYTRIPPRR);
 
 app.use('/styles', sassMiddleware({
   src: srcPath,
