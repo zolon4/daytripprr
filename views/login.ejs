@@ -1,20 +1,24 @@
 <% include ./partials/header %>
-<div id="login">
- <div class="card login-card">
-  <div class="card-block login-card-block">
-   <h3 class="login-heading">login</h3>
-   <form action="/users/login" method="post">
-    <div class="form-group form-group-lg">
-     <input type="text" class="form-control form-control-lg form-control-custom" placeholder="enter email" name="email">
+  <div id="login">
+    <div class="card login-card">
+      <div class="card-block login-card-block">
+        <h3 class="login-heading">login</h3>
+
+        <form action="/users/login" method="post">
+
+          <div class="form-group form-group-lg">
+            <input type="text" class="form-control form-control-lg form-control-custom" placeholder="enter email" name="email">
+          </div>
+
+          <div class="form-group">
+            <input type="password" class="form-control-lg form-control form-control-custom" placeholder="what's your password?"name="password">
+          </div>
+          <input type="submit" value="let's go" class="btn btn-info btn-login btn-block btn-md"></input>
+        </form>
+
+        <hr>
+        <p>Don't already have an account?<a href="/users/signup"> Sign Up!</a></p>
+      </div>
     </div>
-    <div class="form-group">
-     <input type="password" class="form-control-lg form-control form-control-custom" placeholder="what's your password?"name="password">
-    </div>
-    <input type="submit" value="let's go" class="btn btn-info btn-login btn-block btn-md"></input>
-   </form>
-   <hr>
-    <p>Don't already have an account?<a href="/users/signup"> Sign Up!</a></p>
-   </div>
   </div>
- </div>
 <% include ./partials/footer %>

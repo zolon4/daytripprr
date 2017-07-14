@@ -1,22 +1,21 @@
 <% include ./partials/header %>
 <div class="row">
-<div class="col-sm-6.offset-sm-3">
-<div id="search-page">
- <h1 class="search-head">Where do you want to go?</h1>
- <div id="search-form" class="form-group form-inline">
-    <div id="search-form" class="form-group">
-     <div class="input-group search-input">
-     <input id="origin" name="origin" type="text" class="form-control search" size="60" placeholder="Add a starting location">
-     <input id="destination" name="destination" type="text" size="60" class="form-control search" placeholder="Add a destination">
-     <div id="search">
-       <input type="submit" id="out_search"  class="btn btn-primary btn-search btn-block" value="GO">
-     </div>
-     </div>
+  <div class="col-sm-6.offset-sm-3">
+    <div id="search-page">
+      <h1 class="search-head">Where do you want to go?</h1>
+      <div id="search-form" class="form-group form-inline">
+        <div id="search-form" class="form-group">
+          <div class="input-group search-input">
+            <input id="origin" name="origin" type="text" class="form-control search" size="60" placeholder="Add a starting location">
+            <input id="destination" name="destination" type="text" size="60" class="form-control search" placeholder="Add a destination">
+            <div id="search">
+              <input type="submit" id="out_search"  class="btn btn-primary btn-search btn-block" value="GO">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-   </div>
+    <div id="result"></div>
   </div>
-   <div id="result"></div>
- </div>
-</div>
 </div>
 <% include ./partials/footer %>

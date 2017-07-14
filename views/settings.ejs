@@ -1,32 +1,39 @@
 <% include ./partials/header %>
- <div class="row">
-  <div class="col-sm-6.offset-sm-3">
-  <div class="card">
-   <h3 class="settings-heading">Edit Profile</h3>
-   <hr id="settings-hr"/>
-  <div class="card-block">
-   <form action="/users/settings" method="post">
-    <input type="hidden" name="_method" value="put" />
-    <div class="form-group">
-     <label>Username</label>
-     <input type="text" class="form-control " name="username" value="<%= user.local.username %>">
+  <div class="row">
+    <div class="col-sm-6.offset-sm-3">
+      <div class="card">
+        <h3 class="settings-heading">Edit Profile</h3>
+        <hr id="settings-hr"/>
+        <div class="card-block">
+
+          <form action="/users/settings" method="post">
+            <input type="hidden" name="_method" value="put" />
+
+            <div class="form-group">
+              <label>Username</label>
+              <input type="text" class="form-control " name="username" value="<%= user.local.username %>">
+            </div>
+
+            <div class="form-group">
+              <label>Email</label>
+              <input type="text" class="form-control " name="email" value="<%= user.local.email %>">
+            </div>
+
+            <div class="form-group">
+              <label>City</label>
+              <input type="text" class="form-control " name="currentcity" value="<%= user.local.currentcity %>">
+            </div>
+
+            <div class="form-group">
+              <label>State</label>
+              <input type="text" class="form-control" name="currentstate" value="<%= user.local.currentstate %>">
+            </div>
+            
+            <button type="submit" class="btn  btn-primary btn-lg btn-block">SAVE</button>
+          </form>
+
+        </div>
+      </div>
     </div>
-    <div class="form-group">
-     <label>Email</label>
-     <input type="text" class="form-control " name="email" value="<%= user.local.email %>">
-   </div>
-    <div class="form-group">
-     <label>City</label>
-     <input type="text" class="form-control " name="currentcity" value="<%= user.local.currentcity %>">
-   </div>
-    <div class="form-group">
-     <label>State</label>
-     <input type="text" class="form-control" name="currentstate" value="<%= user.local.currentstate %>">
-   </div>
-   <button type="submit" class="btn  btn-primary btn-lg btn-block">SAVE</button>
-  </form>
   </div>
- </div>
-</div>
-</div>
 <% include ./partials/footer %>
